@@ -1,0 +1,10 @@
+intense_debate_acct: f94480fbc3a95d4
+google_analytics: UA-111-1
+
+profiles:
+  development:
+  production:
+    base_url: http://www.wesleyhales.com/
+    deploy:
+      host: www.wesleyhales.com
+      path: /home/wesley/www.wesleyhales.com

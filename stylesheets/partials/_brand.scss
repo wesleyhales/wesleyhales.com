@@ -1,0 +1,52 @@
+/*************************************************/
+/*Colors
+/*************************************************/
+
+/*************************************************/
+/*Font Base
+/*************************************************/
+strong, h1, h2, h3, h5, h6 {
+   font-weight: bold;
+}
+
+h1 {
+   font-size: 2em;
+}
+
+h2 {
+   font-size: 1.5em;
+}
+
+h3 {
+   font-size: 1em;
+}
+
+h4 {
+   font-size: 1em;
+}
+
+h5 {
+   font-size: 0.75em;
+}
+
+h6 {
+   font-size: 0.6875em;
+}
+
+p, dl, dt, dd, ul, ol, pre, input, textarea, blockquote, cite, label, select {
+   font-size: 0.6875em;
+}
+
+em {
+   font-style: italic;
+}
+
+abbr, acronym {
+   border-bottom: 1px dotted #000;
+   cursor: help;
+}
+
+th {
+   font-weight: bold;
+   text-align: center;
+}

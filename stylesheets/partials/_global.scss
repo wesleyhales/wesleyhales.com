@@ -1,0 +1,155 @@
+
+/*************************************************
+Site Navigation
+*************************************************/
+body>header {
+	background: url(../images/skin/renewal/header-bg-pattern.gif) top left repeat-x;
+}
+div.header-box {
+   background: url(../images/skin/renewal/header-bg.gif) top center no-repeat;
+   height: 155px;
+   position: relative;
+   width: 100%;
+}
+
+/*making logo absolute to stay aligned with toolbar*/
+div.header-box > img {
+   position: absolute;
+   top: 10px;
+   left: 30px;
+}
+
+/*.boxshadow div.header-box {
+   border: none;
+   box-shadow: #000 0 0 5px inset;
+   -moz-box-shadow: #000 1px 1px 5px inset;
+   -webkit-box-shadow: #000 1px 1px 5px inset;
+}*/
+
+div.header-box > nav {
+   left: 31px;
+   top: 62px;
+   position: absolute;
+}
+
+.borderradius nav.site a,
+.borderradius nav.console a {
+   opacity: 1.0;
+   border-radius: 5px;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+}
+
+.borderradius nav.site a {
+   background: #f6f6f6;
+}
+
+.borderradius nav.console a {
+   /*background: #e8e8e8;*/
+}
+
+.menu > li {
+   height: 30px;
+   margin: 0 5px 0 0;
+}
+
+.menu li {
+   float: left;
+   position: relative;
+   list-style: none;
+   z-index: 10;
+}
+
+.menu a {
+   text-decoration: none;
+   color: #bfe3f8;
+   display: block;
+   padding: 8px 20px;
+   margin: 0;
+   font-size: 1.4em;
+}
+
+/* main level link on hover and selected */
+ul.menu li.selected > a,
+ul.menu li > a:focus,
+ul.menu li > a:hover,
+ul.menu li:hover > a {
+   background-color: rgba(255, 255, 255, .17);
+   color: #fff;
+}
+
+ul.menu li ul li a {
+   color: #777;
+}
+
+ul.menu li ul li a:hover,
+ul.menu li ul li a:focus {
+   color: #000;
+   font-weight: bold;
+}
+
+/*transition*/
+nav a {
+   padding: 5px 10px; /*background: #9c3;*/
+   -webkit-transition: background .3s ease, color 0.2s linear;
+   -moz-transition: background .3s ease, color 0.2s linear;
+   -o-transition: background .3s ease, color 0.2s linear;
+   transition: background .3s ease, color 0.2s linear;
+}
+
+/*************************************************
+Left Toolbar
+*************************************************/
+
+div.left-toolbar {
+   border-radius: 5px;
+   background-color: #fff;
+   position: absolute;
+   top: 107px;
+   right: 14%;
+   width: 320px;
+   height: 500px;
+/*   background: #fff url(../images/new/toolbar-header-bg.gif) top left repeat-x;*/
+}
+
+h1.toolbar-title {
+   border-bottom: 1px solid #cfe1eb;
+   color: #174e6e;
+   font-size: 1.3em;
+   font-weight: normal;
+   padding: 7px;
+   width: 90%;
+   margin: 0 auto 0 auto;
+}
+
+section.app-tools {
+   position: relative;
+}
+
+section.app-tools header a {
+   display: inline;
+   font-size: 50%;
+   color: #174e6e;
+}
+
+/*************************************************
+Right Content
+*************************************************/
+
+div#main {
+   display: block;
+    position:absolute;
+    height:auto;
+    bottom:0;
+    top:0;
+    left:0;
+    right:0;
+    margin: 154px 364px 0 0;
+}
+
+div.post-container {
+   border: 3px solid #c7d4dc;
+   width: 67%;
+   padding: 0 0 0 0;
+   margin: 10px 0 0 16%;
+}

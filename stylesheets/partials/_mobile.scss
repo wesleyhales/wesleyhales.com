@@ -1,0 +1,140 @@
+/*************************************************
+Mobile Device Page Setup
+*************************************************/
+
+#browser {
+    /*background: #000 -moz-linear-gradient(top, #0e0e0e, #313131);*/
+    /*background: #000 -webkit-gradient(linear, left top, left bottom, from(#0e0e0e), to(#313131));*/
+    position: relative;
+
+}
+
+#page-container {
+    position:absolute;
+    top: 44px;
+    width:100%;
+    height: 100%;
+}
+
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    /*activate the GPU for compositing each page */
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
+/*************************************************
+UX Utils
+*************************************************/
+
+.none {
+    display: none
+}
+
+.hide-it {
+    opacity: 0;
+}
+
+.show {
+    opacity: 100;
+}
+
+.transition {
+    -moz-transition-duration: .5s;
+    -webkit-transition-duration: .5s;
+    -o-transition-duration: .5s;
+}
+
+/*************************************************
+Flip Transition
+*************************************************/
+
+#back,
+#front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition-duration: .5s;
+    -webkit-transform-style: preserve-3d;
+}
+
+.normal {
+    -webkit-transform: rotateY(0deg);
+}
+
+.flipped {
+    -webkit-user-select: element;
+    -webkit-transform: rotateY(180deg);
+}
+
+/*************************************************
+Device Specific Styles
+*************************************************/
+.stage-center {
+    left: 0;
+    opacity: 100;
+}
+
+.stage-left,
+.stage-right{
+    width:1px;
+    height:100%;
+    overflow: hidden;
+    opacity: 0;
+}
+/* iOS/android phone landscape screen width*/
+@media screen and (max-device-width: 480px) and (orientation:landscape) {
+    .stage-left {
+        left: -480px;
+    }
+
+    .stage-right {
+        left: 480px;
+    }
+}
+
+@media screen and (max-device-width: 480px) and (orientation:portrait) {
+    .stage-left {
+        left: -320px;
+    }
+
+    .stage-right {
+        left: 320px;
+    }
+}
+
+@media screen and (min-device-width: 600px) and (orientation:portrait) {
+    .stage-left {
+        left: -600px;
+    }
+
+    .stage-right {
+        left: 600px;
+    }
+}
+
+/* iOS/android phone portrait screen width*/
+@media screen and (max-device-width: 320px) {
+    .stage-left {
+        left: -320px;
+    }
+
+    .stage-right {
+        left: 320px;
+    }
+}
+
+/*catch all for at or larger than handheld landscape device widths*/
+@media screen and (min-device-width: 1000px) {
+    .stage-left {
+        left: -1024px;
+    }
+
+    .stage-right {
+        left: 1024px;
+    }
+
+}

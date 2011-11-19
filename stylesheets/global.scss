@@ -1,0 +1,297 @@
+@import "partials/reset";
+@import "partials/base";
+@import "partials/brand";
+/*@import "partials/global";*/
+@import "partials/navmenu";
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Geneva, Verdana, Arial, sans-serif;
+    /*width:100%;*/
+}
+
+
+a {
+    text-decoration: none;
+}
+
+/*************************************************
+Specific Awestruct extension style
+*************************************************/
+pre {
+  font-family: courier;
+}
+
+.tag-0 {
+  font-size: 100%;
+}
+.tag-1 {
+  font-size: 140%;
+}
+.tag-2 {
+  font-size: 180%;
+}
+.tag-3 {
+  font-size: 220%;
+}
+.tag-4 {
+  font-size: 260%;
+}
+.tag-5 {
+  font-size: 300%;
+}
+.tag-6 {
+  font-size: 300%;
+}
+
+
+
+.pagination-links {
+  font-size: 90%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  .page-link, a, .current-page, span {
+    padding: .6ex;
+  }
+  .page-link, a, .current-page {
+    border: 1px solid #888;
+  }
+  .current-page {
+    border: 1px solid #555;
+    background-color: #ddd;
+    font-weight: bold;
+  }
+  .previous-link, .next-link {
+    font-weight: bold;
+  }
+}
+
+em {
+  font-weight: bold;
+}
+
+/*TODO - move*/
+/*************************************************
+Defined fonts
+*************************************************/
+
+@font-face {
+  font-family: AvenirDemi;
+  src: url(/type/AvenirNextLTPro-Demi.otf);
+  src: local('AvenirDemi'), 
+         url(/type/AvenirNextLTPro-Demi.otf) format("opentype");
+}
+
+@font-face {
+  font-family: AvenirRegular;
+  src: url(/type/AvenirNextLTPro-Regular.otf);
+  src: local('AvenirRegular'), 
+         url(/type/AvenirNextLTPro-Regular.otf) format("opentype");
+}
+
+/*TODO - move*/
+/*************************************************
+Site Navigation
+*************************************************/
+body>header {
+	background: url(../images/skin/renewal/header-bg-pattern.gif) top left repeat-x;
+}
+div.header-box {
+   background: url(../images/skin/renewal/header-bg2.gif) top center no-repeat;
+   height: 155px;
+   position: relative;
+   width: 100%;
+}
+
+
+/*making logo absolute to stay aligned with toolbar*/
+div.header-box > img {
+   position: absolute;
+   top: 10px;
+   left: 6%;
+}
+
+div.header-box > nav {
+   right: 3%;
+   top: 62px;
+   position: absolute;
+}
+
+.borderradius nav.site a,
+.borderradius nav.console a {
+   opacity: 1.0;
+   border-radius: 5px;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+}
+
+.borderradius nav.site a {
+   background: #f6f6f6;
+}
+
+.borderradius nav.console a {
+   /*background: #e8e8e8;*/
+}
+
+.menu > li {
+   height: 30px;
+   margin: 0 5px 0 0;
+}
+
+.menu li {
+   float: left;
+   position: relative;
+   list-style: none;
+   z-index: 10;
+}
+
+.menu a {
+   text-decoration: none;
+   color: #bfe3f8;
+   display: block;
+   padding: 8px 20px;
+   margin: 0;
+   font-size: 1.4em;
+}
+
+/* main level link on hover and selected */
+ul.menu li.selected > a,
+ul.menu li > a:focus,
+ul.menu li > a:hover,
+ul.menu li:hover > a {
+   background-color: rgba(255, 255, 255, .17);
+   color: #fff;
+}
+
+ul.menu li ul li a {
+   color: #777;
+}
+
+ul.menu li ul li a:hover,
+ul.menu li ul li a:focus {
+   color: #000;
+   font-weight: bold;
+}
+
+/*transition*/
+nav a {
+   padding: 5px 10px; /*background: #9c3;*/
+   -webkit-transition: background .3s ease, color 0.2s linear;
+   -moz-transition: background .3s ease, color 0.2s linear;
+   -o-transition: background .3s ease, color 0.2s linear;
+   transition: background .3s ease, color 0.2s linear;
+}
+
+/*************************************************
+Right Toolbar
+*************************************************/
+
+body aside{
+	padding: 7px 0 7px 0;
+	display:block;
+	position: absolute;
+    top: 92px;
+    right: 1%;
+    width: 389px;
+    
+}
+
+body aside .shadow-helper{
+	overflow: hidden;
+	margin: 0 -16px;
+	padding: 10px 0 0 16px;	
+	background: url(../images/skin/renewal/right-col-bg.gif) top left no-repeat;
+	height: 800px;
+}
+
+div.left-toolbar {
+   border-radius: 5px;
+   background-color: #fff;
+   width: 360px;
+}
+
+
+h1.toolbar-title {
+   border-bottom: 1px solid #777;
+   color: #777;
+   font-size: 1.3em;
+   font-weight: normal;
+   padding: 17px 0 7px 0;
+   width: 100%;
+   margin: 0 auto 0 auto;
+}
+
+section.tags {
+   position: relative;
+   width: 90%;
+   margin: 0 auto;
+}
+
+section.tags a {
+   font-size: 50%;
+   color: #174e6e;
+}
+
+/*************************************************
+Right Content
+*************************************************/
+
+div#main {
+   display: block;
+    position:absolute;
+    height:auto;
+    bottom:0;
+    top:0;
+    left:0;
+    right:0;
+    margin: 154px 364px 0 0;
+}
+
+div.post-container {
+/*   border: 3px solid #c7d4dc;*/
+   width: 87%;
+   padding: 0 0 0 0;
+   margin: 10px 0 0 6%;
+}
+
+.post-preview{
+  width: 90%;	
+}
+
+.post {
+  padding-bottom: 2em;
+  margin: 2em;
+  border-bottom: 1px solid #888;
+  h2 {
+    font-size: 170%;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+  }
+  h3 {
+    font-size: 120%;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+  }
+  h4 {
+    font-size: 90%;
+    font-weight: bold;
+  }
+  .content {
+    font-size: 110%;
+    p {
+      margin-bottom: 1.2em;
+      line-height: 1.7em;
+    }
+  }
+}
+
+.fontface .post header  {
+  font-family: AvenirDemi, 'Lucida Grande', sans-serif;
+}
+.no-fontface .post header {
+  font-family: 'Lucida Grande', sans-serif;
+}

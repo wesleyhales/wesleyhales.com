@@ -1,0 +1,79 @@
+.menu {
+   margin: 0;
+   line-height: 100%;
+}
+
+/* sub levels link hover */
+.menu ul li:hover a,
+.menu li:hover li a{
+   background: none;
+   border: none;
+   /*color: #666;*/
+   -webkit-box-shadow: none;
+   -moz-box-shadow: none;
+}
+
+.menu ul a:hover {
+   background: #f8f7de !important; /* for non-css3 browsers */
+   filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f6ec', endColorstr='#faf8cf'); /* for IE */
+   background: -webkit-gradient(linear, left top, left bottom, from(#f7f6ec), to(#faf8cf)) !important; /* for webkit browsers */
+   background: -moz-linear-gradient(top,  #f7f6ec,  #faf8cf) !important; /* for firefox 3.6+ */
+
+   /*color: #fff !important;*/
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   /*text-shadow: 0 1px 1px rgba(0, 0, 0, .1);*/
+}
+/* level 2 list */
+.menu ul{
+   background: #fff; /* for non-css3 browsers */
+   filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#fff'); /* for IE */
+   background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)); /* for webkit browsers */
+   background: -moz-linear-gradient(top,  #fff,  #fff); /* for firefox 3.6+ */
+
+   display: none;
+   margin: 0;
+   padding: 0;
+   width: 185px;
+   position: absolute;
+   top: 30px;
+   left: 0;
+   border: solid 1px #b4b4b4;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   border-radius: 10px;
+   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+   box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+}
+/* dropdown */
+.menu li:hover > ul{
+   display: block;
+}
+.menu ul li {
+   float: none;
+   margin: 0;
+   padding: 0;
+}
+.menu ul a {
+   font-weight: normal;
+   /*text-shadow: 0 1px 1px rgba(255, 255, 255, .9);*/
+}
+/* level 3+ list */
+.menu ul ul {
+   left: 181px;
+   top: -3px;
+}
+/* rounded corners for first and last child */
+.menu ul li:first-child > a {
+   -webkit-border-top-left-radius: 9px;
+   -moz-border-radius-topleft: 9px;
+   -webkit-border-top-right-radius: 9px;
+   -moz-border-radius-topright: 9px;
+}
+.menu ul li:last-child > a {
+   -webkit-border-bottom-left-radius: 9px;
+   -moz-border-radius-bottomleft: 9px;
+   -webkit-border-bottom-right-radius: 9px;
+   -moz-border-radius-bottomright: 9px;
+}

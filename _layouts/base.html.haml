@@ -1,0 +1,43 @@
+!!! 5 
+!!!
+%html
+  %head
+    %title
+      wesleyhales.com: #{page.title}
+    %link{ :rel=>'stylesheet', :type=>'text/css', :href=>'/stylesheets/global.css', :media=>'screen, print' }
+    %link{ :rel=>'alternate',  :type=>'application/atom+xml', :href=>'/blog.atom' }
+    %script{:type => "text/javascript",
+            :src  => "/js/modernizr.js"}
+    %script{:src => "//platform.twitter.com/widgets.js", :type => "text/javascript"}
+            
+  %body
+    %header
+      .header-box
+        %img{:alt => "wesley hales", :src => "/images/skin/renewal/logo.gif"}/
+        %nav.console
+          %ul.menu
+            %li.selected
+              %a{:href => "/index.html"} Blog
+            %li
+              %a{:href => "/projects/index.html"} Projects
+            %li
+              %a{:href => "#"} Contact
+    %aside
+      .shadow-helper
+        .left-toolbar
+          %section{:class=>'tags'}
+            %header
+              %h1{:class=>'toolbar-title'}
+                Tags
+            - for tag in site.posts_tags            
+              %span.tag{:class=>"tag-#{tag.group}"}
+                %a{:href=>tag.primary_page.url}= tag
+            %a.tweet_action.tweet_retweet{:href => "http://twitter.com/intent/retweet?tweet_id=136152354046222336"} retweet
+    #main
+      %div{:class=>'post-container rounded-5px'}
+        .article-list
+          ~ content
+        %br{:class=>'clear'}
+
+
+    = google_analytics
