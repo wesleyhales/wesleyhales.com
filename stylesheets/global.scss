@@ -1,6 +1,6 @@
 @import "partials/reset";
 @import "partials/base";
-@import "partials/brand";
+/*@import "partials/brand";*/
 /*@import "partials/global";*/
 @import "partials/navmenu";
 
@@ -8,6 +8,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
+	font-size: 0.8em;
     font-family: "Lucida Sans Unicode", "Lucida Grande", Geneva, Verdana, Arial, sans-serif;
     /*width:100%;*/
 }
@@ -203,7 +204,7 @@ body aside .shadow-helper{
 	margin: 0 -16px;
 	padding: 10px 0 0 16px;	
 	background: url(../images/skin/renewal/right-col-bg.gif) top left no-repeat;
-	height: 800px;
+	min-height: 800px;
 }
 
 div.left-toolbar {
@@ -213,7 +214,7 @@ div.left-toolbar {
 }
 
 
-h1.toolbar-title {
+div.left-toolbar > section > header > h1 {
    border-bottom: 1px solid #777;
    color: #777;
    font-size: 1.3em;
@@ -223,7 +224,7 @@ h1.toolbar-title {
    margin: 0 auto 0 auto;
 }
 
-section.tags {
+div.left-toolbar > section {
    position: relative;
    width: 90%;
    margin: 0 auto;
@@ -232,6 +233,32 @@ section.tags {
 section.tags a {
    font-size: 50%;
    color: #174e6e;
+}
+
+h1.tweets-title {
+	position: relative;
+}
+
+h1.tweets-title > a > img {
+	position:absolute;
+	right: 5px;
+}
+
+h1.tweets-title > a:visited {
+	color: #777;
+}
+
+section.tweets #twitter_div ul li {
+  /* background: #f8f8f8 -moz-linear-gradient(90deg, rgba(0, 0, 0, .08) 2%, rgba(255, 255, 255, .1) 98%);
+     background: #f8f8f8 -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .1)), to(rgba(0, 0, 0, .08)));*/
+   border: 1px solid #ececec;
+   border-radius: 7px;
+   padding: 5px;
+   margin: 5px;
+}
+
+section.tweets div.actions {
+   font-size: 80%;	
 }
 
 /*************************************************
@@ -281,11 +308,7 @@ div.post-container {
     font-weight: bold;
   }
   .content {
-    font-size: 110%;
-    p {
-      margin-bottom: 1.2em;
-      line-height: 1.7em;
-    }
+    font-size: 1em;	
   }
 }
 
