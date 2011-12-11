@@ -108,10 +108,17 @@ div.header-box {
 
 
 /*making logo absolute to stay aligned with toolbar*/
-div.header-box > img {
+div.header-box > .logo-bold {
    position: absolute;
    top: 10px;
    left: 6%;
+   font-family: AvenirDemi, 'Lucida Grande', sans-serif;
+   font-size: 2em;
+	color: #fff;
+}
+
+div.header-box > .logo-bold span {
+   font-family: AvenirRegular, 'Lucida Grande', sans-serif;
 }
 
 div.header-box > nav {
@@ -308,7 +315,10 @@ div.post-container {
     font-weight: bold;
   }
   .content {
-    font-size: 1em;	
+    font-size: 1em;
+		p {
+			padding: 5px 0 5px 0;
+		}	
   }
 }
 

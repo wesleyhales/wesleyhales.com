@@ -1,10 +1,13 @@
-disqus: wesleyhales
 google_analytics: UA-1241000-10
+
 
 profiles:
   development:
+    disqus: wesleyhales-dev
+    disqus_developer: true
   production:
     base_url: http://www.wesleyhales.com/
+    disqus: wesleyhales
     deploy:
       host: www.wesleyhales.com
       path: /home/wesley/www.wesleyhales.com
