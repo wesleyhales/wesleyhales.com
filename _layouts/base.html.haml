@@ -4,6 +4,7 @@
   %head
     %title
       wesleyhales.com: #{page.title}
+    %meta{'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8'}/
     %link{ :rel=>'stylesheet', :type=>'text/css', :href=>'/stylesheets/global.css', :media=>'screen, print' }
     %link{ :rel=>'alternate',  :type=>'application/atom+xml', :href=>'/blog.atom' } 
             
@@ -15,23 +16,18 @@
           %span><
             \.com
         %nav.console
-          %ul.menu
-            %li.selected
+          %ul#menu
+            %li#home
               %a{:href => "/index.html"} Blog
-            %li
-              %a{:href => "/projects/index.html"} Projects
-            %li
-              %a{:href => "/contact/index.html"} Contact
+            %li#design
+              %a{:href => "/design/?p=design"} Design
+            %li#projects
+              %a{:href => "/projects/?p=projects"} Projects
+            %li#contact
+              %a{:href => "/contact/?p=contact"} Contact
     %aside
       .shadow-helper
         .left-toolbar
-          %section{:class=>'tags'}
-            %header
-              %h1{:class=>'tags-title'}
-                Tags
-            - for tag in site.posts_tags            
-              %span.tag{:class=>"tag-#{tag.group}"}
-                %a{:href=>tag.primary_page.url}= tag
           %section{:class=>'tweets'}
             %header    
               %h1{:class=>'tweets-title'}
@@ -40,6 +36,13 @@
                   My Tweets
               #twitter_div
                 %ul#twitter_update_list
+          %section{:class=>'tags'}
+            %header
+              %h1{:class=>'tags-title'}
+                Tags
+            - for tag in site.posts_tags            
+              %span.tag{:class=>"tag-#{tag.group}"}
+                %a{:href=>tag.primary_page.url}= tag
     #main
       %div{:class=>'post-container rounded-5px'}
         .article-list
@@ -63,6 +66,20 @@
           statusHTML.push('<li><div>'+status+'</div><div class="actions"><a href="http://twitter.com/'+username+'/statuses/'+twitters[i].id_str+'">'+relative_time(twitters[i].created_at)+'</a>|<a class="tweet_action tweet_retweet" href="http://twitter.com/intent/retweet?tweet_id='+twitters[i].id_str+'"><img src="//si0.twimg.com/images/dev/cms/intents/icons/retweet.png">retweet</a>|<a class="tweet_action tweet_reply" href="http://twitter.com/intent/tweet?in_reply_to='+twitters[i].id_str+'"><img src="//si0.twimg.com/images/dev/cms/intents/icons/reply.png">reply</a></div></li>');
         }
         document.getElementById('twitter_update_list').innerHTML = statusHTML.join('');
+      }
+      
+      function getParameterByName(name) {
+        var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+        return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+      }      
+      if(getParameterByName("p") == "design"){
+        document.getElementById('design').className = 'selected';
+      } else if(getParameterByName("p") == "projects"){
+        document.getElementById('projects').className = 'selected';
+      } else if(getParameterByName("p") == "contact"){
+        document.getElementById('contact').className = 'selected';
+      } else {
+        document.getElementById('home').className = 'selected';
       }
   
     %script{:src => "http://twitter.com/statuses/user_timeline/wesleyhales.json?callback=twitterCallback3&amp;count=2", :type => "text/javascript"}

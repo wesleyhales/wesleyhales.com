@@ -143,42 +143,42 @@ div.header-box > nav {
    /*background: #e8e8e8;*/
 }
 
-.menu > li {
+#menu > li {
    height: 30px;
    margin: 0 5px 0 0;
 }
 
-.menu li {
+#menu li {
    float: left;
    position: relative;
    list-style: none;
    z-index: 10;
 }
 
-.menu a {
+#menu a {
    text-decoration: none;
    color: #bfe3f8;
    display: block;
-   padding: 8px 20px;
+   padding: 8px 14px;
    margin: 0;
    font-size: 1.4em;
 }
 
 /* main level link on hover and selected */
-ul.menu li.selected > a,
-ul.menu li > a:focus,
-ul.menu li > a:hover,
-ul.menu li:hover > a {
+ul#menu li.selected > a,
+ul#menu li > a:focus,
+ul#menu li > a:hover,
+ul#menu li:hover > a {
    background-color: rgba(255, 255, 255, .17);
    color: #fff;
 }
 
-ul.menu li ul li a {
+ul#menu li ul li a {
    color: #777;
 }
 
-ul.menu li ul li a:hover,
-ul.menu li ul li a:focus {
+ul#menu li ul li a:hover,
+ul#menu li ul li a:focus {
    color: #000;
    font-weight: bold;
 }
@@ -327,4 +327,17 @@ div.post-container {
 }
 .no-fontface .post header {
   font-family: 'Lucida Grande', sans-serif;
+}
+
+div.design-item {
+ 	border: 1px solid #ececec;
+  border-radius: 7px;
+  padding: 5px;
+  margin: 15px;	
+  width: 505px;
+  float: left;
+  text-align: center;
+	-moz-box-shadow: 0 0 5px 5px #ececec;
+	-webkit-box-shadow: 0 0 5px 5px#ececec;
+	box-shadow: 0 0 5px 5px #ececec;
 }

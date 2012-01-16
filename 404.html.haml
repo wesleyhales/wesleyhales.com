@@ -1,0 +1,19 @@
+---
+layout: base
+title: 404
+---
+
+
+%div{:class=>'projects'}
+  %header
+    %h2{:id=>'project-title'}
+      Hold on, you can still find it...
+  %p
+    Chances are, you stumbled across this page through an old link from my previous blog on jroller.com. Here is a list of every single post I have made from all my blogs, so browse through it to see if you can find what you originally came here for.
+  %br
+  %div.site-links
+    - for post in site.posts
+      %ul
+        %li
+          %a{:href=>post.url}
+            = post.title
