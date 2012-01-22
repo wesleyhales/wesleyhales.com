@@ -8,14 +8,23 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-	font-size: 0.8em;
+	  font-size: 1.0em;
     font-family: "Lucida Sans Unicode", "Lucida Grande", Geneva, Verdana, Arial, sans-serif;
+    position:relative;
     /*width:100%;*/
+}
+
+.fontface body  {
+  font-family: AvenirRegular, 'Lucida Grande', sans-serif;
 }
 
 
 a {
     text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 /*************************************************
@@ -145,7 +154,7 @@ div.header-box > nav {
 
 #menu > li {
    height: 30px;
-   margin: 0 5px 0 0;
+   margin: 0 5px;
 }
 
 #menu li {
@@ -161,7 +170,7 @@ div.header-box > nav {
    display: block;
    padding: 8px 14px;
    margin: 0;
-   font-size: 1.4em;
+   font-size: 1.1em;
 }
 
 /* main level link on hover and selected */
@@ -193,7 +202,7 @@ nav a {
 }
 
 /*************************************************
-Right Toolbar
+Left Toolbar/Column
 *************************************************/
 
 body aside{
@@ -201,14 +210,14 @@ body aside{
 	display:block;
 	position: absolute;
     top: 92px;
-    right: 1%;
+    right: 3%;
     width: 389px;
     
 }
 
 body aside .shadow-helper{
 	overflow: hidden;
-	margin: 0 -16px;
+/*	margin: 0 -16px;*/
 	padding: 10px 0 0 16px;	
 	background: url(../images/skin/renewal/right-col-bg.gif) top left no-repeat;
 	min-height: 800px;
@@ -238,7 +247,7 @@ div.left-toolbar > section {
 }
 
 section.tags a {
-   font-size: 50%;
+   font-size: 82%;
    color: #174e6e;
 }
 
@@ -269,7 +278,7 @@ section.tweets div.actions {
 }
 
 /*************************************************
-Right Content
+Main Content
 *************************************************/
 
 div#main {
@@ -283,15 +292,15 @@ div#main {
     margin: 154px 364px 0 0;
 }
 
-div.post-container {
+div#post-container {
 /*   border: 3px solid #c7d4dc;*/
    width: 87%;
    padding: 0 0 0 0;
-   margin: 10px 0 0 6%;
+   margin: 10px auto 0 auto;
 }
 
 .post-preview{
-  width: 90%;	
+  width: 95%;	
 }
 
 .post {
@@ -320,6 +329,13 @@ div.post-container {
 			padding: 5px 0 5px 0;
 		}	
   }
+  ul {
+	  list-style: circle;
+	  list-style-position: inside;
+	  li {
+		  margin:5px 0 5px 0;
+		}
+  }
 }
 
 .fontface .post header  {
@@ -335,9 +351,120 @@ div.design-item {
   padding: 5px;
   margin: 15px;	
   width: 505px;
-  float: left;
   text-align: center;
 	-moz-box-shadow: 0 0 5px 5px #ececec;
 	-webkit-box-shadow: 0 0 5px 5px#ececec;
 	box-shadow: 0 0 5px 5px #ececec;
+}
+
+.notes {
+  border: 1px solid #ececec;
+  background: #ffff88; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffff88 0%, #ffffc9 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffff88), color-stop(100%,#ffffc9)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ffff88 0%,#ffffc9 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ffff88 0%,#ffffc9 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ffff88 0%,#ffffc9 100%); /* IE10+ */
+	background: linear-gradient(top, #ffff88 0%,#ffffc9 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff88', endColorstr='#ffffc9',GradientType=0 ); /* IE6-9 */
+  padding: 10px;
+  margin: 15px;	
+  width: 39%;
+  float: left;
+  text-align: center;  
+}
+
+.download {
+	padding: 10px;
+  margin: 15px 15px 0 0;	
+  width: 38%;
+  float: right;
+  text-align: right;
+}
+
+/*************************************************
+Media queries
+*************************************************/
+
+/* iOS/android phone landscape screen width*/
+@media screen and (max-device-width: 480px) and (orientation:landscape) {
+    body>aside {
+			display:none;
+		}
+		
+		div#main {
+			margin: 154px 0 0 0;
+		}
+		
+		div#post-container {
+			width: 100%;
+		}
+		
+		div.header-box nav.console {
+			top: 111px;
+		}
+}
+
+@media screen and (max-device-width: 480px) and (orientation:portrait) {
+    body>aside {
+			display:none;
+		}
+		
+		div#main {
+			margin: 154px 0 0 0;
+		}
+		
+		div#post-container {
+			width: 100%;
+		}
+		
+		div.header-box nav.console {
+			top: 111px;
+		}
+}
+
+@media screen and (min-device-width: 600px) and (orientation:portrait) {
+    body>aside {
+			display:none;
+		}
+		
+		div#main {
+			margin: 154px 0 0 0;
+		}
+		
+		div#post-container {
+			width: 100%;
+		}
+		
+		div.header-box nav.console {
+			top: 111px;
+		}
+}
+
+/* iOS/android phone portrait screen width*/
+@media screen and (max-device-width: 320px) {
+    body>aside {
+			display:none;
+		}
+		
+		div#main {
+			margin: 154px 0 0 0;
+		}
+		
+		div#post-container {
+			width: 100%;
+		}
+		
+		div.header-box nav.console {
+			top: 111px;
+		}
+}
+
+/*************************************************
+Utils
+*************************************************/
+.transition {
+    -moz-transition-duration: .5s;
+    -webkit-transition-duration: .5s;
+    -o-transition-duration: .5s;
 }

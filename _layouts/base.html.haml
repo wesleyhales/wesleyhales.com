@@ -1,5 +1,4 @@
 !!! 5 
-!!!
 %html
   %head
     %title
@@ -25,7 +24,7 @@
               %a{:href => "/projects/?p=projects"} Projects
             %li#contact
               %a{:href => "/contact/?p=contact"} Contact
-    %aside
+    %aside#rightcol
       .shadow-helper
         .left-toolbar
           %section{:class=>'tweets'}
@@ -44,7 +43,7 @@
               %span.tag{:class=>"tag-#{tag.group}"}
                 %a{:href=>tag.primary_page.url}= tag
     #main
-      %div{:class=>'post-container rounded-5px'}
+      %div{:id=>'post-container'}
         .article-list
           ~ content
     %br{:class=>'clear'}
@@ -68,6 +67,7 @@
         document.getElementById('twitter_update_list').innerHTML = statusHTML.join('');
       }
       
+      // my custom JS
       function getParameterByName(name) {
         var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
         return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
@@ -81,6 +81,32 @@
       } else {
         document.getElementById('home').className = 'selected';
       }
+      
+      //trying to use responsive design on tablets and desktops
+      //ipads report 980 innerWidth in portrait and 981 in landscape
+      if(!Modernizr.touch || window.innerWidth > 980) {
+        try{
+          //todo need to handle orientation change here as well
+          window.onscroll = function(){
+            if(window.pageYOffset > 1050){
+              document.querySelector('#rightcol').className = 'hidden';
+              document.querySelector('#post-container').style.width = '100%';
+              document.querySelector('#post-container').style.padding = '15px 0 15px 15px';
+              document.querySelector('#post-container').className = 'transition';
+              document.querySelector('#main').style.margin = '154px 0 0 0';
+              document.querySelector('#main').className = 'transition';
+            }else{
+              document.querySelector('#rightcol').className = '';
+              document.querySelector('#post-container').style.width = '87%';
+              document.querySelector('#post-container').className = 'transition';
+              document.querySelector('#main').style.margin = '154px 364px 0 0';
+              document.querySelector('#main').className = 'transition';
+            }
+          }
+        }catch(e){
+          //problem onscroll
+        }
+      };
   
     %script{:src => "http://twitter.com/statuses/user_timeline/wesleyhales.json?callback=twitterCallback3&amp;count=2", :type => "text/javascript"}
 

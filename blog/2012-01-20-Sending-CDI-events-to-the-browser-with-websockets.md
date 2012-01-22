@@ -9,7 +9,7 @@ Disclaimer: Minimal load testing was performed with 10000 concurrent WebSocket c
 </div>
 <div class="download">
   <a href="https://github.com/wesleyhales/HTML5-Mobile-WebSocket" title="Fork me on github"><img src="/images/icons/github-icon.jpg" width="48" height="48" alt="Github Icon"></a>
-  <a href="https://github.com/wesleyhales/HTML5-Mobile-WebSocket/blob/master/jboss-as-html5-mobile.war" title="download the .war"><img src="/images/icons/download.png" width="48" height="48" alt="Download"></a>
+  <a href="https://github.com/wesleyhales/HTML5-Mobile-WebSocket/raw/master/jboss-as-html5-mobile.war" title="download the .war"><img src="/images/icons/download.png" width="48" height="48" alt="Download"></a>
 </div>
 <div style="clear:both;"></div>
 <p>
@@ -72,15 +72,16 @@ Finally, we setup our WebSocket JavaScript client and safely avoid using the eva
 <script src="https://gist.github.com/1651079.js?file=websocketclient.js"></script>
 
 <p>
-Here is the JavaScript code which listens for our CDI event, and executes the necessary client side code.
+Here is the JavaScript code which listens for our CDI event, and executes the necessary client side code. (This is the alert popup seen in the video above.)
 </p>
 <script src="https://gist.github.com/1651079.js?file=cdiJavascriptListener.js"></script> 
 
-<p>
-As you can see, this is a very prototyped approach to achieve $SUBJECT, but it's a step forward in adding a usable programming layer on top of the WebSocket protocol.  
-</p>
 <p>One additional piece I added to this approach is the use of HAProxy. This gives us a reverse-proxy on the WebSocket port (8081), in the end allowing all traffic (HTTP and ws/wss) to be sent across a central port - 8080 in this case. </p>
 <script src="https://gist.github.com/1651079.js?file=haproxy.config"></script>
+
+<p>
+As you can see, this is a very prototyped approach to achieve $SUBJECT, but it's a step forward in adding a usable programming layer on top of the WebSocket protocol. There's probably a few framework out there which try to provide a programming model on top of WebSockets, so leave comments if you know of any.
+</p>
 
 
 
