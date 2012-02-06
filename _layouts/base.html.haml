@@ -6,6 +6,8 @@
     %meta{'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8'}/
     %link{ :rel=>'stylesheet', :type=>'text/css', :href=>'/stylesheets/global.css', :media=>'screen, print' }
     %link{ :rel=>'alternate',  :type=>'application/atom+xml', :href=>'/blog.atom' } 
+    %script{:type => "text/javascript",
+            :src  => "/js/modernizr.js"}
             
   %body
     %header
@@ -42,14 +44,18 @@
             - for tag in site.posts_tags            
               %span.tag{:class=>"tag-#{tag.group}"}
                 %a{:href=>tag.primary_page.url}= tag
+          #fillitkillit{:class=>'none'}
+            Why waste this space?
+            %br/
+            %a{:href => "javascript:fillit();void(0)"} fill
+            | 
+            %a{:href => "javascript:killit();void(0)"} kill
     #main
       %div{:id=>'post-container'}
         .article-list
           ~ content
     %br{:class=>'clear'}
     
-    %script{:type => "text/javascript",
-            :src  => "/js/modernizr.js"}
     %script{:src => "//platform.twitter.com/widgets.js", :type => "text/javascript"}
     %script{:src => "http://twitter.com/javascripts/blogger.js", :type => "text/javascript"}
     :javascript
@@ -68,10 +74,24 @@
       }
       
       // my custom JS
+      
+      //get a request pramaeter
       function getParameterByName(name) {
         var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
         return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
-      }      
+      }   
+      
+      //reckless abandon - adding querySelector as an option to getElementById
+      var orig = document.getElementById;
+      document.getElementById = function(){
+        if (document.querySelector){
+            return document.querySelector('#' + arguments[0]);
+        }else{
+            return orig(arguments[0]);
+        }
+      }   
+      
+      //navigation based on above method... could be better
       if(getParameterByName("p") == "design"){
         document.getElementById('design').className = 'selected';
       } else if(getParameterByName("p") == "projects"){
@@ -81,33 +101,61 @@
       } else {
         document.getElementById('home').className = 'selected';
       }
+      //-----------------------------------------/end nav
       
-      //trying to use responsive design on tablets and desktops
-      //ipads report 980 innerWidth in portrait and 981 in landscape
-      if(!Modernizr.touch || window.innerWidth > 980) {
+      var killed = false;
+      
+      if((!Modernizr.touch || window.innerWidth > 980)) {
         try{
           //todo need to handle orientation change here as well
           window.onscroll = function(){
-            if(window.pageYOffset > 1050){
-              document.querySelector('#rightcol').className = 'hidden';
-              document.querySelector('#post-container').style.width = '100%';
-              document.querySelector('#post-container').style.padding = '15px 0 15px 15px';
-              document.querySelector('#post-container').className = 'transition';
-              document.querySelector('#main').style.margin = '154px 0 0 0';
-              document.querySelector('#main').className = 'transition';
-            }else{
-              document.querySelector('#rightcol').className = '';
-              document.querySelector('#post-container').style.width = '87%';
-              document.querySelector('#post-container').className = 'transition';
-              document.querySelector('#main').style.margin = '154px 364px 0 0';
-              document.querySelector('#main').className = 'transition';
+            if(!killed){
+              if(typeof( window.pageYOffset ) == 'number'){
+                if(window.pageYOffset > 1650) {
+                  showNotif();
+                }else{
+                  document.getElementById("fillitkillit").className = 'sticky-top-right notif transition hide';
+                }
+              }else{
+                //lets deal with IE for the hell of it
+                if(document.documentElement.scrollTop > 1650 ){
+                  showNotif();
+                }else{
+                  document.getElementById("fillitkillit").className = 'none';
+                }
+              }
             }
           }
         }catch(e){
-          //problem onscroll
+          //swallow
         }
-      };
-  
+      }
+      
+      function showNotif(){
+        document.getElementById("fillitkillit").className = 'sticky-top-right notif transition show';
+      }
+      //
+      function fillit() {
+        document.getElementById('rightcol').className = 'hidden';
+        document.getElementById('post-container').style.width = '100%';
+        document.getElementById('post-container').style.padding = '15px 0 15px 15px';
+        document.getElementById('post-container').className = 'transition';
+        document.getElementById('main').style.margin = '154px 0 0 0';
+        document.getElementById('main').className = 'transition';
+        killit();
+      }
+      
+      function killit() {
+        if(document.documentElement){
+           //again, deal with IE
+           document.getElementById("fillitkillit").className = 'none'
+        }else{
+           document.getElementById("fillitkillit").className = 'sticky-top-right notif transition hide'  
+        }
+        
+        killed = true;
+      }
+      
     %script{:src => "http://twitter.com/statuses/user_timeline/wesleyhales.json?callback=twitterCallback3&amp;count=2", :type => "text/javascript"}
 
     = google_analytics

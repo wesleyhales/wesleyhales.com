@@ -25,27 +25,7 @@ Mobile Device Page Setup
     -webkit-transform: translate3d(0, 0, 0);
 }
 
-/*************************************************
-UX Utils
-*************************************************/
 
-.none {
-    display: none
-}
-
-.hide-it {
-    opacity: 0;
-}
-
-.show {
-    opacity: 100;
-}
-
-.transition {
-    -moz-transition-duration: .5s;
-    -webkit-transition-duration: .5s;
-    -o-transition-duration: .5s;
-}
 
 /*************************************************
 Flip Transition
