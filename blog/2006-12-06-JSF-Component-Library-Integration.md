@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: JSF Component Library Integration
-tags: [Java]
+tags: [JSF, Java]
 ---
 
 

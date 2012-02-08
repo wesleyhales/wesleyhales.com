@@ -15,11 +15,11 @@ layout: base
         = page.next_post.title
   .clearfix
 .post
-  %h2
+  %h2.title
     = page.title
-  %h3
+  %h3.date
     = page.date.strftime( '%d %B %Y' )
-  %h4
+  %h4.tags
     - for tag in page.tags
       - unless tag.nil?
         %a{:href=>tag.primary_page.url}

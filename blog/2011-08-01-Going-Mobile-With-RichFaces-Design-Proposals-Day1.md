@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Going Mobile With RichFaces! Design Proposals - Day1
-tags: [Java, java, jsf, mobile, richfaces, web]
+tags: [Java, jsf, mobile, richfaces, web]
 ---
 
 <p><p>Today marks an important day in the <a href="http://www.jboss.org/richfaces">RichFaces project</a> as we continue to head down the mobile web road. Since we have such a great community of users and followers, we want you to be involved with the design process.<br /> 

@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Preformatting html code blocks
-tags: [Java]
+tags: [util]
 ---
 
 

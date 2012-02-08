@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: RichFaces Mobile Designs - Day 3
-tags: [Java, java, mobile, richfaces]
+tags: [Java, mobile, richfaces]
 ---
 
 <p><p>So I made it over the hump of this mobile design week of madness. Below you will find a dark theme with a component skin for the rich:accordion component.</p><p><br /> 

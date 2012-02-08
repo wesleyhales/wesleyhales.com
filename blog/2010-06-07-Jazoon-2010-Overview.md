@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Jazoon 2010 Overview
-tags: [Java, conferences, java, jazoon]
+tags: [Java, conferences, jazoon]
 ---
 
 <p><p>I've always heard good things about Jazoon and I got to experience it first hand this week. Definitely one of the larger conferences based in Europe, I was impressed not only by the venue but also with the star studded line&#45;up of talented speakers/developers.</p></p> 

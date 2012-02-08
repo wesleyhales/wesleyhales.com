@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Going Mobile With RichFaces 4 - Part 1&#58; Drag and Drop
-tags: [Java, jquery, jsf, richfaces]
+tags: [Java, jquery, JSF, richfaces]
 ---
 
 <p><p><a href="http://www.jboss.org/richfaces/">Richfaces 4</a> just reached Milestone 6 and now would be a great time for the community to step up and check how the components run on mobile platforms.<br /> 

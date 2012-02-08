@@ -122,7 +122,7 @@ div.header-box > .logo-bold {
    top: 10px;
    left: 6%;
    font-family: AvenirDemi, 'Lucida Grande', sans-serif;
-   font-size: 2em;
+   font-size: 1.5em;
 	color: #fff;
 }
 
@@ -305,9 +305,15 @@ div#post-container {
 
 .post {
   padding-bottom: 2em;
-  margin: 2em;
+  margin: 2em 2em 2em 0;
   border-bottom: 1px solid #888;
   h2 {
+    font-size: 170%;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+  }
+	h2.title {
     font-size: 170%;
     font-weight: bold;
     margin: 0px;
@@ -319,9 +325,30 @@ div#post-container {
     margin: 0px;
     padding: 0px;
   }
+	h3.date {
+    font-size: 80%;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    color: #999;
+		position:absolute;
+		text-align:center;
+  }
   h4 {
     font-size: 90%;
     font-weight: bold;
+  }
+	h4.tags {
+    font-size: 90%;
+    border-bottom: 1px dotted #999;
+		margin: 0 0 15px 0;
+		text-align: right;
+		font-weight: normal;
+		font-family: AvenirRegular;
+		color: #999;
+  }
+  h4.tags a {
+	  color: #6D90BD;
   }
   .content {
     font-size: 1em;
@@ -339,7 +366,7 @@ div#post-container {
 }
 
 .fontface .post header  {
-  font-family: AvenirDemi, 'Lucida Grande', sans-serif;
+  font-family: AvenirRegular, 'Lucida Grande', sans-serif;
 }
 .no-fontface .post header {
   font-family: 'Lucida Grande', sans-serif;
@@ -429,6 +456,10 @@ Media queries
 		div.header-box nav.console {
 			top: 111px;
 		}
+		
+		div.post {
+			margin: 2em 1em 2em 1.5em;
+		}
 }
 
 @media screen and (max-device-width: 480px) and (orientation:portrait) {
@@ -446,6 +477,10 @@ Media queries
 		
 		div.header-box nav.console {
 			top: 111px;
+		}
+		
+		div.post {
+			margin: 2em 1em 2em 1.5em;
 		}
 }
 
@@ -465,6 +500,10 @@ Media queries
 		div.header-box nav.console {
 			top: 111px;
 		}
+		
+		div.post {
+			margin: 2em 1em 2em 1.5em;
+		}
 }
 
 /* iOS/android phone portrait screen width*/
@@ -483,6 +522,10 @@ Media queries
 		
 		div.header-box nav.console {
 			top: 111px;
+		}
+		
+		div.post {
+			margin: 2em 1em 2em 1.5em;
 		}
 }
 
@@ -509,4 +552,8 @@ Utils
 
 .show {
     opacity: 100;
+}
+
+.max-width-100 {
+	  max-width: 100%;
 }

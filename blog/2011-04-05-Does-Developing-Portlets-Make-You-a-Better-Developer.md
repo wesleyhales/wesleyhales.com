@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Does Developing Portlets Make You a Better Developer?
-tags: [Java, java, jsf, portal, portlets]
+tags: [Java, jsf, portal, portlets]
 ---
 
 <p><p>Working with portlet technology is often discredited for it’s seemingly complex <span class="caps">API</span> and development hoops one must jump through. But if you have worked on a portlet project for a considerable amount of time, and then jump back to a servlet based project, you have a feeling that life just got easier.<br /> 
