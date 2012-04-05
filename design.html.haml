@@ -6,33 +6,65 @@ title: Design
 
 %div{:class=>'design'}
   %header
-    %h2{:id=>'design-title'}
-      All my ideas, projects, and stuff I designed (but may or may not have implemented). If you want the PSD files, send me an <a href="mailto:wesleyhales@gmail.com">email</a>.
+    %h1 
+      Projects
+    %p
+      Throughout my entire professional career, I have served in the following roles. This is a brief look at things I've worked on past and present.
+    %ul.toc-list
+      %li{:onclick=>'location.hash=\'#programming\''}
+        %a{:href=>'#programming'}
+          Programming
+      %li{:onclick=>'location.hash=\'#user-interface\''}
+        %a{:href=>'#user-interface'}
+          User Interface
+      %li{:onclick=>'location.hash=\'#user-experience\''}
+        %a{:href=>'#user-experience'}
+          User Experience
+      %li{:onclick=>'location.hash=\'#graphic-design\''}  
+        %a{:href=>'#graphic-design'}
+          Graphic Design
+      
     #design-content
+      %h2{:id=>'graphic-design'}
+        Graphic Design
+      %p
+        My designs usually start out with a rough draft on a sheet of paper. From there, I normally take the pen tool and start blowing people's minds... vector style. Design work is a creative outlet for me and I try to design something at least every few months. Everything I do is original and I don't use auto-tune ;)
       .design-item
-        Rough draft of a mobile analytics concept home page graphic:<br/>
         %a{:href => "/images/design/first-post/layout1-mod.png"}
-          %img{:height => "360", :src => "/images/design/first-post/layout1-mod-small.png", :width => "500"}/
+          %img{:src => "/images/design/first-post/layout1-mod-small.png", :class => "max-width-100"}/
+        Rough draft of a mobile analytics concept home page graphic.
+      %h2{:id=>'user-interface'}
+        User Interface
+      %p
+        I try to adhere to a few principals when dealing with both User Interface design and development. For design it's simple - Make the user's interaction as simple and efficient as possible. All while making it look cool of course. Good User Interface design puts emphasis on goals and completing tasks without drawing too much attention to itself.  
+      %p
+        Here we have a fully implemented Firefox theme circa 2009. Over 1.2 million installs and 300k active daily users. During the Firefox 3.6 era, this theme was hot and I received quite a few generous donations from random kind-hearted people. A very worth while open source effort for me.
       .design-item
-        A fully implemented Firefox theme circa 2009. Over 1.2 million installs and 300k active daily users<br/>
         %a{:href => "/images/design/first-post/ff3-anthem.png"}
-          %img{:src => "/images/design/first-post/ff3-anthem-small.png", :width => "500"}/
+          %img{:src => "/images/design/first-post/ff3-anthem-small.png", :class => "max-width-100"}/
+      %p
+        This next theme just ended up being a creative outlet for me. I never made it to publishing the actual them on Mozilla's website. After Firefox 4 came along, things began moving so freakin' fast in the browser scene and I couldn't keep up with porting my themes to the new versions.
       .design-item
-        Another Firefox theme which was (close but) never implemented. Inspired by SGU.<br/>
         %a{:href => "/images/design/first-post/ff-recovery.png"}
-          %img{:src => "/images/design/first-post/ff-recovery-small.png", :width => "500"}/
+          %img{:src => "/images/design/first-post/ff-recovery-small.png", :class => "max-width-100"}/
+      %p
+        Cormada is a project I thought of back in 2010. 
+        %a{:href => "http://techcrunch.com/2011/08/29/yc-funded-bushido-an-app-store-for-the-web-that-can-kickstart-your-side-projects/"}Bushido 
+        came along shortly after I stalled on the idea. The basic idea was, upload any POC or example project you have written and let others run or use it. If it's good, turn it into an OSS project. No idea if it could make money :)
       .design-item
-        An idea I had for open source project prototyping. Your apps run in the cloud, etc... 
-        %a{:href => "http://techcrunch.com/2011/08/29/yc-funded-bushido-an-app-store-for-the-web-that-can-kickstart-your-side-projects/"}Bushido came along shortly after I stalled on the idea.<br/>
         %a{:href => "/images/design/first-post/cormada-home.png"}
-          %img{:src => "/images/design/first-post/cormada-home-small.png", :width => "500"}/
-        <br/>
-        %a{:href => "/images/design/first-post/cormada-detail.png"}
-          %img{:src => "/images/design/first-post/cormada-detail.png", :width => "500"}/
+          %img{:src => "/images/design/first-post/cormada-home-small.png", :class => "max-width-100"}/
+      %p Cormada app detail page
       .design-item
-        These concepts went along with the first graphic in this list<br/>
+        %a{:href => "/images/design/first-post/cormada-detail.png"}
+          %img{:src => "/images/design/first-post/cormada-detail.png", :class => "max-width-100"}/
+      %h2{:id=>'user-experience'}
+        User Experience
+      %p
+        This is another side project I worked on with 2 other founders. I did all the design in Photoshop, but the User Experience was my true focus here. The main question I kept asking myself is "How can I make users fall in love with this product". I had to back out for personal reasons. But this project is still going strong.
+      .design-item
         %a{:href => "/images/design/first-post/demo-charts-2.png"}
-          %img{:src => "/images/design/first-post/demo-charts-2-small.png", :width => "500"}/
+          %img{:src => "/images/design/first-post/demo-charts-2-small.png", :class => "max-width-100"}/
         <br/>
         %a{:href => "/images/design/first-post/demo-charts-1.png"}
-          %img{:src => "/images/design/first-post/demo-charts-1-small.png", :width => "500"}/
+          %img{:src => "/images/design/first-post/demo-charts-1-small.png", :class => "max-width-100"}/

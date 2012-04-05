@@ -27,6 +27,26 @@ a:hover {
     text-decoration: underline;
 }
 
+h1 {
+   font-size: 1.8em;
+   font-weight: normal;
+   padding: 17px 0 7px 0;
+   width: 100%;
+   margin: 0 auto 0 auto;
+}
+
+h2 {
+   font-size: 1.3em;
+   font-weight: normal;
+   padding: 17px 0 7px 0;
+   width: 100%;
+   margin: 0 auto 0 auto;
+}
+
+p {
+  margin: 7px 0 0 0;
+}
+
 /*************************************************
 Specific Awestruct extension style
 *************************************************/
@@ -230,14 +250,9 @@ div.left-toolbar {
 }
 
 
-div.left-toolbar > section > header > h1 {
+div.left-toolbar > section > header > h2 {
    border-bottom: 1px solid #777;
    color: #777;
-   font-size: 1.3em;
-   font-weight: normal;
-   padding: 17px 0 7px 0;
-   width: 100%;
-   margin: 0 auto 0 auto;
 }
 
 div.left-toolbar > section {
@@ -251,16 +266,16 @@ section.tags a {
    color: #174e6e;
 }
 
-h1.tweets-title {
+h2.tweets-title {
 	position: relative;
 }
 
-h1.tweets-title > a > img {
+h2.tweets-title > a > img {
 	position:absolute;
 	right: 5px;
 }
 
-h1.tweets-title > a:visited {
+h2.tweets-title > a:visited {
 	color: #777;
 }
 
@@ -372,17 +387,7 @@ div#post-container {
   font-family: 'Lucida Grande', sans-serif;
 }
 
-div.design-item {
- 	border: 1px solid #ececec;
-  border-radius: 7px;
-  padding: 5px;
-  margin: 15px;	
-  width: 505px;
-  text-align: center;
-	-moz-box-shadow: 0 0 5px 5px #ececec;
-	-webkit-box-shadow: 0 0 5px 5px#ececec;
-	box-shadow: 0 0 5px 5px #ececec;
-}
+
 
 .notes {
   border: 1px solid #ececec;
@@ -435,6 +440,33 @@ div.design-item {
   text-align: right;
 }
 
+.toc-list {
+  margin: 10px 0 0 0;
+  max-width: 300px;
+}
+
+.toc-list li {
+  margin: 3px 0;
+  padding: 8px 5px 5px 5px;
+  background-color: #eaeaea;
+  border-radius: 7px;
+}
+
+/*************************************************
+Design page
+*************************************************/
+div.design-item {
+ 	border: 1px solid #ececec;
+  border-radius: 7px;
+  padding: 5px;
+  margin: 15px;	
+  text-align: center;
+	-moz-box-shadow: 0 0 5px 5px #ececec;
+	-webkit-box-shadow: 0 0 5px 5px#ececec;
+	box-shadow: 0 0 5px 5px #ececec;
+	max-width: 510px;
+}
+
 /*************************************************
 Media queries
 *************************************************/
@@ -450,7 +482,7 @@ Media queries
 		}
 		
 		div#post-container {
-			width: 100%;
+			width: 90%;
 		}
 		
 		div.header-box nav.console {
@@ -472,7 +504,7 @@ Media queries
 		}
 		
 		div#post-container {
-			width: 100%;
+			width: 90%;
 		}
 		
 		div.header-box nav.console {
@@ -494,7 +526,7 @@ Media queries
 		}
 		
 		div#post-container {
-			width: 100%;
+			width: 90%;
 		}
 		
 		div.header-box nav.console {
@@ -517,7 +549,7 @@ Media queries
 		}
 		
 		div#post-container {
-			width: 100%;
+			width: 90%;
 		}
 		
 		div.header-box nav.console {

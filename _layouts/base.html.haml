@@ -31,15 +31,15 @@
         .left-toolbar
           %section{:class=>'tweets'}
             %header    
-              %h1{:class=>'tweets-title'}
+              %h2{:class=>'tweets-title'}
                 %a{:href => "http://twitter.com/wesleyhales"}
                   %img{:src => "//si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png"}/ 
-                  My Tweets
+                  Tweets
               #twitter_div
                 %ul#twitter_update_list
           %section{:class=>'tags'}
             %header
-              %h1{:class=>'tags-title'}
+              %h2{:class=>'tags-title'}
                 Tags
             - for tag in site.posts_tags            
               %span.tag{:class=>"tag-#{tag.group}"}
