@@ -21,16 +21,20 @@
             %li#home
               %a{:href => "/index.html"} Blog
             %li#design
-              %a{:href => "/design/?p=design"} Design
+              %a{:href => "/design/?p=design"} Projects
             %li#projects
-              %a{:href => "/projects/?p=projects"} Projects
-            %li#contact
-              %a{:href => "/contact/?p=contact"} Contact
+              %a{:href => "/contact/?p=contact"} Social Me
     %aside#rightcol
       .shadow-helper
         .left-toolbar
+          %section{:class=>'recent-comments'}
+            %header 
+              #recentcomments.dsq-widget
+                %h2.dsq-widget-title 
+                  Recent Comments
+                %script{:src =>"http://wesleyhales.disqus.com/recent_comments_widget.js?num_items=5&hide_avatars=0&avatar_size=24&excerpt_length=200", :type =>"text/javascript"} 
           %section{:class=>'tweets'}
-            %header    
+            %header 
               %h2{:class=>'tweets-title'}
                 %a{:href => "http://twitter.com/wesleyhales"}
                   %img{:src => "//si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png"}/ 
@@ -61,6 +65,7 @@
     :javascript
       function twitterCallback3(twitters) {
         var statusHTML = [];
+        //var ls = 'localStorage' in window && window['localStorage'] !== null;
         for (var i=0; i<twitters.length; i++){
           var username = twitters[i].user.screen_name;
           var status = twitters[i].text.replace(/((https?|s?ftp|ssh)\:\/\/[^"\s\<\>]*[^.,;'">\:\s\<\>\)\]\!])/g, function(url) {
@@ -101,9 +106,10 @@
       } else {
         document.getElementById('home').className = 'selected';
       }
+      
       //-----------------------------------------/end nav
       
-      var killed = false;
+      /*var killed = false;
       
       if((!Modernizr.touch || window.innerWidth > 980)) {
         try{
@@ -154,8 +160,7 @@
         }
         
         killed = true;
-      }
+      }*/
       
     %script{:src => "http://twitter.com/statuses/user_timeline/wesleyhales.json?callback=twitterCallback3&amp;count=2", :type => "text/javascript"}
-
     = google_analytics

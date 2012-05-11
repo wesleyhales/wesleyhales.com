@@ -250,7 +250,8 @@ div.left-toolbar {
 }
 
 
-div.left-toolbar > section > header > h2 {
+div.left-toolbar > section > header > h2,
+div.left-toolbar > section > header > div > h2  {
    border-bottom: 1px solid #777;
    color: #777;
 }
