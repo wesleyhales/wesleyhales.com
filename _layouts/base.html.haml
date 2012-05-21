@@ -4,7 +4,7 @@
     %title
       wesleyhales.com: #{page.title}
     %meta{'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8'}/
-    %link{ :rel=>'stylesheet', :type=>'text/css', :href=>'/stylesheets/global.css', :media=>'screen, print' }
+    %link{ :rel=>'stylesheet', :type=>'text/css', :href=>'/stylesheets/global.css?v23', :media=>'screen, print' }
     %link{ :rel=>'alternate',  :type=>'application/atom+xml', :href=>'/blog.atom' } 
     %script{:type => "text/javascript",
             :src  => "/js/modernizr.js"}
@@ -23,7 +23,7 @@
             %li#design
               %a{:href => "/design/?p=design"} Projects
             %li#projects
-              %a{:href => "/contact/?p=contact"} Social Me
+              %a{:href => "/contact/?p=contact"} Me
     %aside#rightcol
       .shadow-helper
         .left-toolbar
@@ -33,6 +33,13 @@
                 %h2.dsq-widget-title 
                   Recent Comments
                 %script{:src =>"http://wesleyhales.disqus.com/recent_comments_widget.js?num_items=5&hide_avatars=0&avatar_size=24&excerpt_length=200", :type =>"text/javascript"} 
+          %section.tags
+            %header 
+              %h2.tags-title
+                My Book
+              .book-container
+                %a{:href => "http://shop.oreilly.com/product/0636920024088.do"}
+                  %img{:src => "/images/icons/mybook.png"}/
           %section{:class=>'tweets'}
             %header 
               %h2{:class=>'tweets-title'}
@@ -41,19 +48,6 @@
                   Tweets
               #twitter_div
                 %ul#twitter_update_list
-          %section{:class=>'tags'}
-            %header
-              %h2{:class=>'tags-title'}
-                Tags
-            - for tag in site.posts_tags            
-              %span.tag{:class=>"tag-#{tag.group}"}
-                %a{:href=>tag.primary_page.url}= tag
-          #fillitkillit{:class=>'none'}
-            Why waste this space?
-            %br/
-            %a{:href => "javascript:fillit();void(0)"} fill
-            | 
-            %a{:href => "javascript:killit();void(0)"} kill
     #main
       %div{:id=>'post-container'}
         .article-list

@@ -19,8 +19,9 @@ body {
 }
 
 
-a {
+a, a:visited {
     text-decoration: none;
+    color: #39C;
 }
 
 a:hover {
@@ -293,6 +294,12 @@ section.tweets div.actions {
    font-size: 80%;	
 }
 
+.book-container{
+  width: 100%;
+  text-align:center;
+  padding: 10px;
+}
+
 /*************************************************
 Main Content
 *************************************************/
@@ -449,7 +456,7 @@ div#post-container {
 .toc-list li {
   margin: 3px 0;
   padding: 8px 5px 5px 5px;
-  background-color: #eaeaea;
+  background-color: #eee;
   border-radius: 7px;
 }
 
@@ -589,4 +596,18 @@ Utils
 
 .max-width-100 {
 	  max-width: 100%;
+}
+
+/*DISQUS*/
+.dsq-widget-list {
+  font-size: 90%;
+}
+
+a.dsq-widget-user {
+  font-weight: bold;
+  color: #1670A3;
+}
+
+.gist {
+  font-size: 80%;
 }
