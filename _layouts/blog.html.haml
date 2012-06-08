@@ -24,6 +24,7 @@ layout: base
       - unless tag.nil?
         %a{:href=>tag.primary_page.url}
           = tag
+        |
   .content
     ~page.content
   .comments
