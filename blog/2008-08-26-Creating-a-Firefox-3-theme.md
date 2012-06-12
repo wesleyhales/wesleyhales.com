@@ -2,6 +2,8 @@
 layout: blog
 title: Creating a Firefox 3 theme
 tags: [Java, design, firefox, theme]
+preview: I decided to tryout Firefox theme building a few weeks ago on vacation. It took me a few days to design ...
+previewimage:
 ---
 
 <div style="padding:5px; margin:5px; background-color:#f9f5ae; border:1px solid #b2ac4f;">**UPDATE - This theme is now available on Mozilla.org here: <a href="https://addons.mozilla.org/en-US/firefox/addon/9627/" style="color:#20aa30">https://addons.mozilla.org/en-US/firefox/addon/9627/</a></div> 

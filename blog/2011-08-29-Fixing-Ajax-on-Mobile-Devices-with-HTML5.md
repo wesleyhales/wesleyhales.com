@@ -2,6 +2,8 @@
 layout: blog
 title: Fixing Ajax on Mobile Devices (with HTML5)
 tags: [Java, ajax, html5, innerhtml]
+preview: Use the new HTML5 iframe sandbox attribute to parse sanitize a dynamically loaded DOM. I also talk about how innerHTML randomly breaks on iOS devices.
+previewimage:
 ---
 <p><strong>Update: <a href="https://twitter.com/#!/_boye/">@_boye</a> has created <a href="http://jsperf.com/ajax-response-handling-innerhtml-vs-sandboxed-iframe">a perf test which shows the performance of this solution</a>. Remarkably, This iFrame solution outperforms innerHTML on Firefox 7 and maintains the same speed on Chrome 16.</strong></p>
 <p>The most common approach for receiving markup from an Ajax request is to use innerHTML for placement of the responseText. This method has been widely used (and argued) since the inception of XHR, but it surprises me that it's still being recommended and used not only on desktop browsers but mobile ones as well.</p>

@@ -2,6 +2,8 @@
 layout: blog
 title: JBoss Portlet Bridge Beta2 Released!
 tags: [Java, bridge, portlet, richfaces, seam]
+preview: The JBoss implementation of the JSR-301 spec allows developers the ability to develop portlets...
+previewimage:
 ---
 
 <p>The JBoss implementation of the JSR-301 spec allows developers the ability to develop portlets with any mixture of Seam, RichFaces, and JSF. One of the main goals of the 301 specification is to make life easier on the JSF developer who chooses to integrate his web application into a portal environment. The JBoss Portlet Bridge project builds on that vision of no-hassle integration and setup.</p> 

@@ -2,6 +2,8 @@
 layout: blog
 title: iPhone Web Development
 tags: [Java]
+preview:
+previewimage:
 ---
 
 <div> 

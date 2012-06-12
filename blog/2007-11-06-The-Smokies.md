@@ -2,6 +2,8 @@
 layout: blog
 title: The Smokies
 tags: [Life, vacation]
+preview:
+previewimage:
 ---
 
 <p>I guess everybody has a place a few hours from home that they can go and relax and enjoy nature. One rednecktastic place I like to go is at the foothills of the Smoky Mountains in Tennessee. Gatlinburg is a trip, and if you like <a href="http://www.dollyparton.com/">Dolly Parton</a>, well this is the place for you.</p> 

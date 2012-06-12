@@ -2,6 +2,8 @@
 layout: blog
 title: Maven 2 vs. Ant (revisited)
 tags: [Java, ant, lrd, maven]
+preview:
+previewimage:
 ---
 
 <p>Almost a year since I made <a href="http://www.jroller.com/wesleyhales/entry/maven_2_vs_ant_which">this entry</a> and I think Maven is great for open source and commercial apps. Sure, there may be <a href="http://blog.thomas.heute.name/2007/10/ant-vs-maven-round-2.html">a few things</a> you want to do that don't fit into the "Maven way" but for the most part, it is a great build system. 

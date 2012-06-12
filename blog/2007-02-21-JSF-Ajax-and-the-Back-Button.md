@@ -2,11 +2,13 @@
 layout: blog
 title: JSF, Ajax, and the Back Button
 tags: [Java]
+preview:
+previewimage:
 ---
 
 <p>For the last few weeks I have been trying to integrate back button support into a JSF/Ajax app as an "Undo" feature. I have been using 2 approaches, 1) <A href="">g4jsf</a> (a subproject of Ajax4JSF) to enable use of GWT, and 2) <a href="http://manual.dojotoolkit.org/WikiHome/DojoDotBook/Book0">dojo.undo.browser</a>.</p>
 <p>Currently, any engineer interacting with the back button through javascript only has access to a few methods. <code>window.history.current</code>, <code>window.history.next</code>, <code>window.history.previous</code>, and an array of history items with <code>window.history[]</code>. Gwt and dojo give us a much more accessible way to deal with these same methods through Java and javascript .(along with a few other features) </p> 
-<p>My largest existing hurdle is getting the history or state of each view to be stored in some kind of *history cache*. And when the back button is clicked, each of those view should be able to work as first rendered. Or, you could save the POST string somehow and just re-POST that string when the back button is clicked. I was chatting with my buddy Mert Çaliskan, and he suggested that a custom ViewHandler may work or to use client side state saving, but I have not gotten around to testing those theories.</p> 
+<p>My largest existing hurdle is getting the history or state of each view to be stored in some kind of *history cache*. And when the back button is clicked, each of those view should be able to work as first rendered. Or, you could save the POST string somehow and just re-POST that string when the back button is clicked. I was chatting with my buddy Mert ï¿½aliskan, and he suggested that a custom ViewHandler may work or to use client side state saving, but I have not gotten around to testing those theories.</p> 
 <p class="pTitle"> 
 The g4jsf (Java) approach 
 </p> 

@@ -2,6 +2,8 @@
 layout: blog
 title: JSF components with the Ajax4jsf cdk
 tags: [Java]
+preview:
+previewimage:
 ---
 
 <p>The <a href="http://labs.jboss.com/portal/jbossrichfaces">Ajax4jsf cdk</a> (component development kit) from the Richfaces/Ajax4jsf development team makes the monotonous coding 

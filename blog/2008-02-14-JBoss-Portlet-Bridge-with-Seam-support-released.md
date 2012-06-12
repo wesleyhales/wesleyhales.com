@@ -2,6 +2,8 @@
 layout: blog
 title: JBoss Portlet Bridge with Seam support released
 tags: [Java, bridge, jsf, portlet, richfaces, seam]
+preview:
+previewimage:
 ---
 
 <p>It has been quite a while in the making (a couple months) and we finally have a beta release of the portlet bridge.</p> 

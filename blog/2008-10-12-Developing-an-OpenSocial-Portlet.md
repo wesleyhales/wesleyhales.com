@@ -2,6 +2,8 @@
 layout: blog
 title: Developing an OpenSocial Portlet
 tags: [Java, opensocial, portal, portlets]
+preview: I dedicated some time this weekend to creating a fully functional demo with OpenSocial, Shindig and JBoss Portal...
+previewimage:
 ---
 
 <a href="/images/jroller/Picture-6.jpg"><img src="/images/jroller/Picture-6-small.jpg" style="margin:5px;" align="right"/></a><p>I dedicated some time this weekend to creating a fully functional demo with OpenSocial, Shindig and JBoss Portal. It seems like OpenSocial has a lot of new supported platforms coming out in 0.8 and the future is looking promising. Here is a bullet list to summarize what I found:</p> 

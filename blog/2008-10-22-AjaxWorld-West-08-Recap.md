@@ -2,6 +2,8 @@
 layout: blog
 title: AjaxWorld West '08 Recap
 tags: [Java, ajaxworld]
+preview: This week, I attended/spoke at the AjaxWorld conference in San Jose...
+previewimage:
 ---
 
 <p>This week, I attended/spoke at the <a href="http://ajaxworld.com/">AjaxWorld</a> conference in San Jose. The cool thing for me is that this was my <a href="http://www.slideshare.net/wesleyhales/ajax-in-enterprise-portals-presentation/">first public speaking appearance</a>. This leads to another notch in my belt of professional development and evangelism. I really got a lot out of the conference because I was able to meet quite a few people that I have known but never actually met in person. On that note, all of the exhibitors and speakers at the conference were very welcoming to form alliances and work together to help each other out.</p> 

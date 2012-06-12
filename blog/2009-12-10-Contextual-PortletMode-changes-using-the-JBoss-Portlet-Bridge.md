@@ -2,6 +2,8 @@
 layout: blog
 title: Contextual PortletMode changes using the JBoss Portlet Bridge
 tags: [Java, portal, portlets, seam]
+preview: A brainstorming/usecase post on how to leverage portlet development for complex apps.
+previewimage:
 ---
 
 <p>By default, the JSR-301/329 portlet bridge manages your navigation history during PortletMode changes. Meaning that, if the user is clicking around in the portlet "view" mode and decides to click the help icon (help mode), the user should be directed to the place where he left off in help mode - and vice versa. Of course, if the user has never been in help mode during the current session, he will go to the default help viewId.</p> 

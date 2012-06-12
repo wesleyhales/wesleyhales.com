@@ -2,6 +2,8 @@
 layout: blog
 title: XHTML to PDF with a Seam filter
 tags: [Java, pdf, seam]
+preview:
+previewimage:
 ---
 
 <p>After reading <a href="http://today.java.net/pub/a/today/2006/10/31/combine-facelets-and-flying-saucer-renderer.html">this article</a> showing how to create a servlet filter that will render XHTML to a PDF, image, or SVG, I was inspired to try it out as a filter in Seam using the @Filter annotation. The filter installation went smoothly but getting Flying Saucer to parse the generated JSF and css background images was not so easy.</p> 

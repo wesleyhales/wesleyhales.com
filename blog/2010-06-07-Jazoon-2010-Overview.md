@@ -2,6 +2,8 @@
 layout: blog
 title: Jazoon 2010 Overview
 tags: [Java, conferences, jazoon]
+preview: My recap of the Jazoon 2010 conference in Zurich, Switzerland.
+previewimage:
 ---
 
 <p><p>I've always heard good things about Jazoon and I got to experience it first hand this week. Definitely one of the larger conferences based in Europe, I was impressed not only by the venue but also with the star studded line&#45;up of talented speakers/developers.</p></p> 

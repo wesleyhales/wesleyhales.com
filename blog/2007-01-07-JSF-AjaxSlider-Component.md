@@ -2,6 +2,8 @@
 layout: blog
 title: JSF AjaxSlider Component
 tags: [Java]
+preview:
+previewimage:
 ---
 
 <p>This is the first release of my AjaxSlider component. This version works with JSP and Facelets and also extends FacesEvent to provide it's own event/listener. Many thanks to Jonas Jacobi and John Fallows for putting together a great book (<a href="http://apress.com/book/bookDisplay.html?bID=10044">Pro JSF and Ajax</a>).</p> 

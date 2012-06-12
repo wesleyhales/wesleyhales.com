@@ -2,6 +2,8 @@
 layout: blog
 title: Developing Portlets using JSF, Ajax, and Seam (Part 1 of 3)
 tags: [Java, 301, bridge, container, jboss, jsf, jsr, portal, portlet]
+preview: InfoQ just published a series of 3 articles I wrote for the JBoss Portlet Bridge.
+previewimage:
 ---
 
 <p>InfoQ just published the first in a series of 3 articles for the JBoss Portlet Bridge. The author of this series did an unbelievable job. I could write a whole post about how great his article(s) are, but I would hate to loose sight of this post topic :-) heh - just kidding... the author is me!</p> 

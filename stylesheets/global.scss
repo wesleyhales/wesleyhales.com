@@ -8,14 +8,16 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-	  font-size: 1.0em;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", Geneva, Verdana, Arial, sans-serif;
+    font-size: .9em;
+    font-family: proxima-nova-extra-condensed,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Arial,sans-serif;
     position:relative;
     /*width:100%;*/
 }
 
-.fontface body  {
+.fontface body {
+  h1,h2,h3{
   font-family: AvenirRegular, 'Lucida Grande', sans-serif;
+  }
 }
 
 
@@ -111,14 +113,14 @@ Defined fonts
 @font-face {
   font-family: AvenirDemi;
   src: url(/type/AvenirNextLTPro-Demi.otf);
-  src: local('AvenirDemi'), 
+  src: local('AvenirDemi'),
          url(/type/AvenirNextLTPro-Demi.otf) format("opentype");
 }
 
 @font-face {
   font-family: AvenirRegular;
   src: url(/type/AvenirNextLTPro-Regular.otf);
-  src: local('AvenirRegular'), 
+  src: local('AvenirRegular'),
          url(/type/AvenirNextLTPro-Regular.otf) format("opentype");
 }
 
@@ -127,7 +129,7 @@ Defined fonts
 Site Navigation
 *************************************************/
 body>header {
-	background: url(../images/skin/renewal/header-bg-pattern.gif) top left repeat-x;
+    background: url(../images/skin/renewal/header-bg-pattern.gif) top left repeat-x;
 }
 div.header-box {
    background: url(../images/skin/renewal/header-bg2.gif) top center no-repeat;
@@ -144,7 +146,7 @@ div.header-box > .logo-bold {
    left: 6%;
    font-family: AvenirDemi, 'Lucida Grande', sans-serif;
    font-size: 1.5em;
-	color: #fff;
+    color: #fff;
 }
 
 div.header-box > .logo-bold span {
@@ -227,21 +229,21 @@ Left Toolbar/Column
 *************************************************/
 
 body aside{
-	padding: 7px 0 7px 0;
-	display:block;
-	position: absolute;
+    padding: 7px 0 7px 0;
+    display:block;
+    position: absolute;
     top: 92px;
     right: 3%;
     width: 389px;
-    
+
 }
 
 body aside .shadow-helper{
-	overflow: hidden;
+    overflow: hidden;
 /*	margin: 0 -16px;*/
-	padding: 10px 0 0 16px;	
-	background: url(../images/skin/renewal/right-col-bg.gif) top left no-repeat;
-	min-height: 800px;
+    padding: 10px 0 0 16px;
+    background: url(../images/skin/renewal/right-col-bg.gif) top left no-repeat;
+    min-height: 800px;
 }
 
 div.left-toolbar {
@@ -269,16 +271,16 @@ section.tags a {
 }
 
 h2.tweets-title {
-	position: relative;
+    position: relative;
 }
 
 h2.tweets-title > a > img {
-	position:absolute;
-	right: 5px;
+    position:absolute;
+    right: 5px;
 }
 
 h2.tweets-title > a:visited {
-	color: #777;
+    color: #777;
 }
 
 section.tweets #twitter_div ul li {
@@ -291,7 +293,7 @@ section.tweets #twitter_div ul li {
 }
 
 section.tweets div.actions {
-   font-size: 80%;	
+   font-size: 80%;
 }
 
 .book-container{
@@ -323,21 +325,45 @@ div#post-container {
 }
 
 .post-preview{
-  width: 95%;	
+  width: 95%;
+  header {
+    //position: relative;
+    border-bottom: 1px dotted #999;
+    margin: 0 0 10px 0;
+  }
+  .post {
+    border: none;
+    padding: 0;
+    h2.title {
+      //border-bottom: 1px dotted #999;
+      font-size: 149%;
+      font-weight: bold;
+      margin: 0px;
+      padding: 0px;
+      width: auto;
+      //position:absolute;
+      //bottom: 2px;
+      //left: 3px;
+    }
+    h4.tags {
+      margin: 10px 0 7px 0;
+      background-color: #FAFAFA;
+    }
+  }
 }
 
 .post {
   padding-bottom: 2em;
-  margin: 2em 2em 2em 0;
+  margin: 2em 2em 2.5em 0;
   border-bottom: 1px solid #888;
   h2 {
-    font-size: 170%;
+    font-size: 149%;
     font-weight: bold;
     margin: 0px;
     padding: 0px;
   }
-	h2.title {
-    font-size: 170%;
+  h2.title {
+    font-size: 149%;
     font-weight: bold;
     margin: 0px;
     padding: 0px;
@@ -348,43 +374,61 @@ div#post-container {
     margin: 0px;
     padding: 0px;
   }
-	h3.date {
+  h3.date {
     font-size: 80%;
     font-weight: bold;
     margin: 0px;
     padding: 0px;
     color: #999;
-		position:absolute;
-		text-align:center;
+    position:absolute;
+    text-align:center;
   }
+
+  .date-box {
+    float:left;
+    margin: 0 10px 0 0;
+    .date-day,
+    .date-month{
+      margin: 0px;
+      padding: 0px;
+      color: #999;
+      text-align:center;
+      font-size: 90%
+    }
+
+    .date-day{
+      font-size: 150%
+    }
+  }
+
   h4 {
     font-size: 90%;
     font-weight: bold;
   }
-	h4.tags {
-    font-size: 90%;
-    border-bottom: 1px dotted #999;
-		margin: 0 0 15px 0;
-		text-align: right;
-		font-weight: normal;
-		font-family: AvenirRegular;
-		color: #999;
+  h4.tags {
+      font-size: 90%;
+      border-bottom: 1px dotted #999;
+      margin: 0 0 7px 0;
+      text-align: right;
+      font-weight: normal;
+      font-family: AvenirRegular;
+      color: #999;
   }
   h4.tags a {
-	  color: #6D90BD;
+      color: #6D90BD;
   }
   .content {
     font-size: 1em;
-		p {
-			padding: 5px 0 5px 0;
-		}	
+      p {
+        padding: 5px 0 5px 0;
+      }
   }
   ul {
-	  list-style: circle;
-	  list-style-position: inside;
-	  li {
-		  margin:5px 0 5px 0;
-		}
+    list-style: circle;
+    list-style-position: inside;
+    li {
+        margin:5px 0 5px 0;
+    }
   }
 }
 
@@ -400,49 +444,49 @@ div#post-container {
 .notes {
   border: 1px solid #ececec;
   background: rgb(255,255,255); /* Old browsers */
-	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(47%,rgba(246,246,246,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* IE10+ */
-	background: linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+  background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(47%,rgba(246,246,246,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* IE10+ */
+  background: linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
   padding: 10px;
-  margin: 15px;	
+  margin: 15px;
   width: 39%;
   float: left;
-  text-align: center; 
-  border-radius: 7px; 
+  text-align: center;
+  border-radius: 7px;
 }
 
 .notif {
   border: 1px solid #ececec;
   background: #ffff88; /* Old browsers */
-	background: -moz-linear-gradient(top, #ffff88 0%, #ffffc9 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffff88), color-stop(100%,#ffffc9)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #ffff88 0%,#ffffc9 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #ffff88 0%,#ffffc9 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #ffff88 0%,#ffffc9 100%); /* IE10+ */
-	background: linear-gradient(top, #ffff88 0%,#ffffc9 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff88', endColorstr='#ffffc9',GradientType=0 ); /* IE6-9 */
+  background: -moz-linear-gradient(top, #ffff88 0%, #ffffc9 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffff88), color-stop(100%,#ffffc9)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #ffff88 0%,#ffffc9 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ffff88 0%,#ffffc9 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #ffff88 0%,#ffffc9 100%); /* IE10+ */
+  background: linear-gradient(top, #ffff88 0%,#ffffc9 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff88', endColorstr='#ffffc9',GradientType=0 ); /* IE6-9 */
   padding: 10px;
-  margin: 15px;	
+  margin: 15px;
   width: 39%;
   float: left;
-  text-align: center;  
+  text-align: center;
   border-radius: 7px;
 }
 
 .sticky-top-right {
-	position:fixed;
-	top:10px;
-	right:0;
-	width:250px
+    position:fixed;
+    top:10px;
+    right:0;
+    width:250px
 }
 
 .download {
-	padding: 10px;
-  margin: 15px 15px 0 0;	
+    padding: 10px;
+  margin: 15px 15px 0 0;
   width: 38%;
   float: right;
   text-align: right;
@@ -464,15 +508,15 @@ div#post-container {
 Design page
 *************************************************/
 div.design-item {
- 	border: 1px solid #ececec;
+  border: 1px solid #ececec;
   border-radius: 7px;
   padding: 5px;
-  margin: 15px;	
+  margin: 15px;
   text-align: center;
-	-moz-box-shadow: 0 0 5px 5px #ececec;
-	-webkit-box-shadow: 0 0 5px 5px#ececec;
-	box-shadow: 0 0 5px 5px #ececec;
-	max-width: 510px;
+  -moz-box-shadow: 0 0 5px 5px #ececec;
+  -webkit-box-shadow: 0 0 5px 5px#ececec;
+  box-shadow: 0 0 5px 5px #ececec;
+  max-width: 510px;
 }
 
 /*************************************************
@@ -481,92 +525,96 @@ Media queries
 
 /* iOS/android phone landscape screen width*/
 @media screen and (max-device-width: 480px) and (orientation:landscape) {
+
     body>aside {
-			display:none;
-		}
-		
-		div#main {
-			margin: 154px 0 0 0;
-		}
-		
-		div#post-container {
-			width: 90%;
-		}
-		
-		div.header-box nav.console {
-			top: 111px;
-		}
-		
-		div.post {
-			margin: 2em 1em 2em 1.5em;
-		}
+        display:none;
+    }
+
+    div#main {
+        margin: 154px 0 0 0;
+    }
+
+    div#post-container {
+        width: 90%;
+    }
+
+    div.header-box nav.console {
+        top: 111px;
+    }
+
+    div.post {
+        margin: 2em 1em 2em 1.5em;
+    }
 }
 
 @media screen and (max-device-width: 480px) and (orientation:portrait) {
+
     body>aside {
-			display:none;
-		}
-		
-		div#main {
-			margin: 154px 0 0 0;
-		}
-		
-		div#post-container {
-			width: 90%;
-		}
-		
-		div.header-box nav.console {
-			top: 111px;
-		}
-		
-		div.post {
-			margin: 2em 1em 2em 1.5em;
-		}
+        display:none;
+    }
+
+    div#main {
+        margin: 154px 0 0 0;
+    }
+
+    div#post-container {
+        width: 90%;
+    }
+
+    div.header-box nav.console {
+        top: 111px;
+    }
+
+    div.post {
+        margin: 2em 1em 2em 1.5em;
+    }
 }
 
 @media screen and (min-device-width: 600px) and (orientation:portrait) {
+
     body>aside {
-			display:none;
-		}
-		
-		div#main {
-			margin: 154px 0 0 0;
-		}
-		
-		div#post-container {
-			width: 90%;
-		}
-		
-		div.header-box nav.console {
-			top: 111px;
-		}
-		
-		div.post {
-			margin: 2em 1em 2em 1.5em;
-		}
+        display:none;
+    }
+
+    div#main {
+        margin: 154px 0 0 0;
+    }
+
+    div#post-container {
+        width: 90%;
+    }
+
+    div.header-box nav.console {
+        top: 111px;
+    }
+
+    div.post {
+        margin: 2em 1em 2em 1.5em;
+    }
 }
 
 /* iOS/android phone portrait screen width*/
 @media screen and (max-device-width: 320px) {
+
     body>aside {
-			display:none;
-		}
-		
-		div#main {
-			margin: 154px 0 0 0;
-		}
-		
-		div#post-container {
-			width: 90%;
-		}
-		
-		div.header-box nav.console {
-			top: 111px;
-		}
-		
-		div.post {
-			margin: 2em 1em 2em 1.5em;
-		}
+        display:none;
+    }
+
+    div#main {
+        margin: 154px 0 0 0;
+    }
+
+    div#post-container {
+        width: 90%;
+    }
+
+    div.header-box nav.console {
+        top: 111px;
+    }
+
+    div.post {
+        margin: 2em 1em 2em 1.5em;
+    }
 }
 
 /*************************************************
@@ -583,7 +631,7 @@ Utils
 }
 
 .notnone {
-	  display: default;
+      display: default;
 }
 
 .hide {
@@ -595,7 +643,7 @@ Utils
 }
 
 .max-width-100 {
-	  max-width: 100%;
+      max-width: 100%;
 }
 
 /*DISQUS*/

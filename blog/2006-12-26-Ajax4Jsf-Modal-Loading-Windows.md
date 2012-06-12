@@ -2,6 +2,8 @@
 layout: blog
 title: Ajax4Jsf Modal Loading Windows
 tags: [Java]
+preview:
+previewimage:
 ---
 
 <p>Ajax4Jsf's status tag (<a href="https://ajax4jsf.dev.java.net/nonav/documentation/ajax-documentation/ch06s11.html">a4j:status</a>) has alot of potential, but currently it's functionality is limited. With the combination of <a href="http://www.huddletogether.com/projects/lightbox2/">Lightbox 2.0</a>, or basically any javascript developed to build the dom, you can achieve the look of any modal "Loading..." window.</p> 

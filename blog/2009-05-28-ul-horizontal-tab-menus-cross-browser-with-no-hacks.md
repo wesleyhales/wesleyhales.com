@@ -2,6 +2,8 @@
 layout: blog
 title: ul horizontal tab menus, cross browser, with no hacks
 tags: [Java]
+preview: This code works across all the browsers and allows for a consistent tab navigation structure.
+previewimage:
 ---
 
 <p>There are too many times when I need a nice horizontal tab menu, using semantic html, and with cool graphics all at the same time. So this post is more for my personal reference and will shave a few hours off any ones html prototype. This is cross browser valid css 2.1 on IE6, IE7, FF3, Chrome and Safari without using any hacks.</p> 

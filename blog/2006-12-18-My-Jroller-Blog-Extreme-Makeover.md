@@ -2,6 +2,8 @@
 layout: blog
 title: My Jroller Blog Extreme Makeover
 tags: [Design]
+preview:
+previewimage:
 ---
 
 <p>I need a new design badly (the little British car in the tunnel is getting old, quick), and after coding for x number of months, I feel like my design skillz are getting a little stale. So here are the candidates for my new look.</p> 

@@ -2,6 +2,8 @@
 layout: blog
 title: The Ultimate Guide For Developer Screencasts
 tags: [Java]
+preview: How to create a class screencast for your project. Tips and tricks I've used while creating videos for my projects at JBoss.
+previewimage:
 ---
 
 <p><img alt="JBoss Portlet Bridge Logo" align="right" src="/images/jroller/jbossportletbridge_logo.gif"/> About a year ago, I decided to start creating screen casts for the <a href="http://jboss.org/portletbridge" target="_blank">JBoss Portlet Bridge</a> open source project. As a manager of a relatively small, niche project, it is easy for me to try new things that can only improve the community around the project &#45; or serve as a learning lesson for myself. Screencasts are nothing new to the development scene, but my goal was to liven it up a bit and make the outcome seem more professional and well produced. At the same time, covering all the important facets of managing a community like community member recognition, to getting started, and so on.</p> 

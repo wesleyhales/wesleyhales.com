@@ -2,6 +2,8 @@
 layout: blog
 title: How to make money off of a Firefox theme (or not)
 tags: [Java, firefox, theme]
+preview: This weekend was quite an eye opener for me. Since the first public release of...
+previewimage:
 ---
 
 <p>This weekend was quite an eye opener for me. Since the first public release of <a href="https://addons.mozilla.org/en-US/firefox/addon/9627/">ANTHEM</a> (my Firefox 3 theme), I have been trying to think of a way to monetize the downloads. Not really looking for a way to get rich, but a way to take advantage of, as of today, a theme that has been downloaded almost 500,000 times.</p> 

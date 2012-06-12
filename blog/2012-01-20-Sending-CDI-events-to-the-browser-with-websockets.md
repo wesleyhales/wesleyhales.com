@@ -2,6 +2,8 @@
 layout: blog
 title: Pushing CDI Events to the Browser with WebSockets
 tags: [html5, websocket, jboss, jetty, cdi]
+preview: In this post, I give a basic demo on how to embed Jetty to add Web Socket support to and Java based server. I also how to send JavaScript events to the browser via a socket connection.
+previewimage:
 ---
 
 <div class="notes" >

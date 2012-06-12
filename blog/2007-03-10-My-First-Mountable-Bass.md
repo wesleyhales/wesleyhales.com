@@ -2,6 +2,8 @@
 layout: blog
 title: My First Mountable Bass
 tags: [Life]
+preview:
+previewimage:
 ---
 
 <img style="float:right;" src="src="/images/jroller/fishing_cropped.gif" alt="" /> 

@@ -2,6 +2,8 @@
 layout: blog
 title: Runtime Type Detection and Usage with Weld
 tags: [Java, cdi, hornetq, infinispan, jms, jsf, richfaces, seam, weld]
+preview: I coded this prototype for the JBoss World 2011 keynote. Shows how to use CDI for Runtime type detection.
+previewimage:
 ---
 
 <p><p><p class="pTitle">About TweetStream</p><br /> 

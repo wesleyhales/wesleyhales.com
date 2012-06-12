@@ -2,6 +2,8 @@
 layout: blog
 title: Page and Component Modal with a4j&#58;status
 tags: [Java, demo, jboss, modal, richfaces]
+preview:
+previewimage:
 ---
 
 <p>I haven't really had a chance to look at RichFaces OOB modal, but I had written <a href="http://www.jroller.com/page/wesleyhales/?anchor=adding_lightbox_to_ajax4jsf_and">this one</a> over a year ago when Ajax4JSF was still on java.net</p> 

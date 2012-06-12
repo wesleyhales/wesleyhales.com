@@ -2,6 +2,8 @@
 layout: blog
 title: Replacing Photoshop With CSS3 - Creating Styles
 tags: [Java, html5]
+preview: Here I explain how to use CSS gradients to create a simple, reusable style across any element or button.  One of my first posts on designing in the browser.
+previewimage:
 ---
 
 <p><p>One trendy technique that I often use in Photoshop (for buttons, nav bars, etc&#8230;) is a gradient that slightly variates from its base color with a hint of inner shadow (for highlight).<br /> 

@@ -2,6 +2,8 @@
 layout: blog
 title: 2 years of blogging about java and my life, now what?
 tags: [Life]
+preview: It has been 2 years since I decided to write my first blog post and I am pretty happy I did so.
+previewimage:
 ---
 
 <p>It has been 2 years since I decided to write my first blog post and I am pretty happy I did so. When I first tossed the idea around about it (and this was back in 2006) I was thinking, man, blogging is so 2002 and why would anybody want to read about stuff I'm doing. But much to my surprise, starting a blog is one of the best things I could've done. Much better than joining any social network by far, and much better than thinking future employers will take my resume at face value.</p> 

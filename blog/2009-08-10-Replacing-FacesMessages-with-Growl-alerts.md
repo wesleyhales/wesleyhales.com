@@ -2,6 +2,8 @@
 layout: blog
 title: Replacing FacesMessages with Growl alerts
 tags: [Java, 2.0, growl, jsf, richfaces]
+preview: How to add hotness to your RichFacess/JSF error and warning messages with Growl-like alerts.
+previewimage:
 ---
 
 <p>I saw a tweet from(<a href="http://twitter.com/maxandersen">@maxandersen</a>) the other day and decided to try adding Growl like messages in a standard JSF/Richfaces application using jGrowl. It is quite simple and my approach could definitely be improved upon.</p> 

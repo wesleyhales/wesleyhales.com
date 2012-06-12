@@ -2,6 +2,8 @@
 layout: blog
 title: Ajax4Jsf vs AjaxAnywhere&#58; The t&#58;dataTable and t&#58;dataScroller
 tags: [Java]
+preview:
+previewimage:
 ---
 
 

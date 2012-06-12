@@ -2,6 +2,8 @@
 layout: blog
 title: Choppy scrolling on iOS with iscroll and PhoneGap
 tags: [phonegap, css3, iscroll]
+preview: Using certain CSS selectors yields bad performance, especially on mobile devices. This is a problem recently faces by the Wikipedia mobile iOS app which I helped troubleshoot.
+previewimage:
 ---
 I ran into a situation this weekend where certain pages of a PhoneGap application were incredibly choppy on iOS versions pre 4.3.x.
 Apparently, there is a problem with older browsers using CSS3 selectors like <code>div[style*='foo']</code> in combination with other DOM elements.

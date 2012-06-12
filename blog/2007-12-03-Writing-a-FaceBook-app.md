@@ -2,6 +2,8 @@
 layout: blog
 title: Writing a FaceBook app
 tags: [Java, facebook, seam]
+preview:
+previewimage:
 ---
 
 <p>I just recently setup a Facebook profile in an effort to network with other like minded professionals and because I haven't really had a reason to do so until I joined JBoss. It is astonishing how many people have accounts and are using Facebook on a daily basis. I really haven't followed the social networking fad/trend that has been going on for the past few years and I keep wondering what is going to be next. Linking people to each other in some way, shape, or form based on interests, work , hobbies, etc. has been going since modern civilization began and the social internet is just one of the many channels to do it.</p> 

@@ -2,6 +2,8 @@
 layout: blog
 title: Recovering deleted files from Windows and Linux... and a little forensics
 tags: [Utils, file, forensics, recovery, undelete]
+preview: I got one of those "tech support" phone calls from a family member this weekend...
+previewimage:
 ---
 
 <p>I got one of those "tech support" phone calls from a family member this weekend, asking if I could help him undelete some files that were deleted by some ghost that snuck into his office ;) You gotta love it when people say they have no idea how an entire folder got deleted and they swear they've been hacked.</p> 

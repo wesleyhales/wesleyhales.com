@@ -2,6 +2,8 @@
 layout: blog
 title: JSF in a portlet has never been this easy!
 tags: [Java, bridge, jsf, portlet]
+preview: We just released JBoss Portlet Bridge Beta3 along with some good supporting documentation and example projects.
+previewimage:
 ---
 
 <p>We just released JBoss Portlet Bridge Beta3 along with some good supporting documentation and example projects. <a href="http://www.jboss.org/files/portletbridge/docs/1.0.0.B3/en/html_single/index.html">See the documentation for full details</a>. 

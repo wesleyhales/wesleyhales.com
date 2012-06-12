@@ -2,6 +2,8 @@
 layout: blog
 title: Creating (another) Firefox Theme
 tags: [Java, firefox]
+preview: After creating the ANTHEM Firefox theme, I decided to start on another. This one was never published to the Mozilla extensions repo, but it's worth blogging about :)
+previewimage:
 ---
 
 <a href="/images/jroller/recovery/ff3-theme-new-h-small.jpg"><img src="/images/jroller/recovery/ff3-theme-new-h-small.jpg" style="margin:5px;" align="right"/></a> 

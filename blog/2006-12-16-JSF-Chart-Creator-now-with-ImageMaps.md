@@ -2,6 +2,8 @@
 layout: blog
 title: JSF Chart Creator - now with ImageMaps!
 tags: [Java]
+preview:
+previewimage:
 ---
 
 

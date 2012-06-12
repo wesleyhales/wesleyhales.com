@@ -2,6 +2,8 @@
 layout: blog
 title: Preformatting html code blocks
 tags: [util]
+preview:
+previewimage:
 ---
 
 

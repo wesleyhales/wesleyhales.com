@@ -2,6 +2,8 @@
 layout: blog
 title: AeroGear - Mobile, HTML5, and Auwesome
 tags: [html5e, jboss, aerogear, mobile]
+preview: AeroGear is a new project at JBoss which I helped get off the ground. Read what it's all about.
+previewimage: /images/design/poh5.flow.expanded.png
 ---
 
 <p>

@@ -2,6 +2,8 @@
 layout: blog
 title: JSF Ajax Filter/Slider with UIData
 tags: [Java]
+preview:
+previewimage:
 ---
 
 <p>In any RIA where h:dataTable is used, probably 90% of the time, you will need a filter in the same view/page as the dataTable. A Filter can be anything from a list of links, a select many list, or in this example, a slider.</p> 

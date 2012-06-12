@@ -2,6 +2,8 @@
 layout: blog
 title: AJAX in Enterprise Portals at AjaxWorld
 tags: [Java, ajax, enterprise, portals]
+preview: I will be giving a presentation for the AjaxWorld conference Tuesday at 5:00 on Ajax in Enterprise Portals...
+previewimage:
 ---
 
 <p>I will be giving a presentation for the AjaxWorld conference Tuesday at 5:00 on Ajax in Enterprise Portals. If you are here in San Jose, don't be a stranger! 

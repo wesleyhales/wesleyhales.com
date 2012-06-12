@@ -2,6 +2,8 @@
 layout: blog
 title: Using Facelets TagHandlers and Adding multiple listeners
 tags: [Java]
+preview:
+previewimage:
 ---
 
 <p>

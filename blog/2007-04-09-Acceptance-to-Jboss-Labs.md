@@ -2,6 +2,8 @@
 layout: blog
 title: Acceptance to Jboss Labs
 tags: [Life]
+preview:
+previewimage:
 ---
 
 <p>I woke this morning to find a very nice surprise in my email....</p> 

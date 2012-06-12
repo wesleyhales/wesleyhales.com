@@ -2,6 +2,8 @@
 layout: blog
 title: Going Mobile With RichFaces! Design Proposals - Day2
 tags: [Java, jsf, mobile, richfaces, web]
+preview: Day 2 of RichFaces mobile design madness.
+previewimage:
 ---
 
 <p><p>Day 2 of the RichFaces skinning and we have the first approach for tablet devices. Tablets are a little harder to design for because of a few reasons:</p> 

@@ -2,6 +2,8 @@
 layout: blog
 title: My 4 month old MacBook Pro Hardrive is skippping... badly
 tags: [Java, bad, drive, hard]
+preview:
+previewimage:
 ---
 
 <p>It's never a good thing when your hard drive starts making that funny little skipping noise. But, it's really not good when you push the power button and all you hear are loud ass clicks and you can feel the vibration of each click on the keyboard.</p> 

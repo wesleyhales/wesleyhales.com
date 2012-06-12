@@ -2,6 +2,8 @@
 layout: blog
 title: 1 year of blogging
 tags: [Life, anniversary, blog]
+preview:
+previewimage:
 ---
 
 <p>Today marks my 1 year anniversary of blogging. I started this blog to basically express my views and opinions, to give back to the open source community of whom so much has been taken, and for job credibility.</p> 
