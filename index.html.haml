@@ -15,10 +15,15 @@ title: Blog
           .date-month
             = post.date.strftime( '%b' )
           .date-day
-            = post.date.strftime( '%d' )
+            - if post.date.strftime( '%d' )[0,1] == "0"
+              = post.date.strftime( '%d' )[1,2]
+            - else
+              = post.date.strftime( '%d' )
+          .date-year
+            = post.date.strftime( '%Y' )
         ~post.preview
         %a{:href=>post.url}
-          [read more]..
+          [read more]
       %h4.tags.clear
         - for tag in post.tags
           - unless tag.nil?

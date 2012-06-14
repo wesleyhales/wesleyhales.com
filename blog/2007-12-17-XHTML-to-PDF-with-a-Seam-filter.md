@@ -2,7 +2,7 @@
 layout: blog
 title: XHTML to PDF with a Seam filter
 tags: [Java, pdf, seam]
-preview:
+preview: After reading this article showing how to create a servlet filter that will render XHTML to a PDF, image, or SVG, I was inspired to...
 previewimage:
 ---
 

@@ -2,7 +2,7 @@
 layout: blog
 title: Page and Component Modal with a4j&#58;status
 tags: [Java, demo, jboss, modal, richfaces]
-preview:
+preview: I haven't really had a chance to look at RichFaces OOB modal, but I had written...
 previewimage:
 ---
 

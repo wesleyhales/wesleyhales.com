@@ -2,7 +2,7 @@
 layout: blog
 title: Writing a FaceBook app
 tags: [Java, facebook, seam]
-preview:
+preview: I just recently setup a Facebook profile in an effort to network with other like minded professionals and because I haven't really...
 previewimage:
 ---
 

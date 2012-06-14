@@ -2,7 +2,7 @@
 layout: blog
 title: 1 year of blogging
 tags: [Life, anniversary, blog]
-preview:
+preview: Today marks my 1 year anniversary of blogging. I started this blog to basically express my views and opinions, to...
 previewimage:
 ---
 

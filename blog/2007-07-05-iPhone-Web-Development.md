@@ -2,7 +2,7 @@
 layout: blog
 title: iPhone Web Development
 tags: [Java]
-preview:
+preview: I broke down and got my 8gig iPhone on Tuesday. I have been using it pretty heavily and in just a sec, I will start with my list o' let...
 previewimage:
 ---
 

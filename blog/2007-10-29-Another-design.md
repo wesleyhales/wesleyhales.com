@@ -2,7 +2,7 @@
 layout: blog
 title: Another design
 tags: [Design, balls, design, kick]
-preview:
+preview: The designer inside me just won't give up. I have tried and tried to put down the Photoshop paint brush and embrace development only...
 previewimage:
 ---
 

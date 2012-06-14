@@ -2,7 +2,7 @@
 layout: blog
 title: Running Seam 2.0 on Tomcat(EJB3) using Maven and Cargo
 tags: [Java, cargo, maven, seam, tomcat]
-preview:
+preview: In this article I review a simple Seam 2.0.0.CR2 app that deploys to Tomcat 6.0.13 with JBoss Embedded Beta2...
 previewimage:
 ---
 

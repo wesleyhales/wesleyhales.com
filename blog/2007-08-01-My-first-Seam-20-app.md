@@ -2,7 +2,7 @@
 layout: blog
 title: My first Seam 2.0 app
 tags: [Java, flying, hibernate, jsf, saucer, seam, trinidad]
-preview:
+preview: Before I begin, let me say thank you! thank you! thank you! for the extended EL in Seam. On a previous project, I was using straight JSF...
 previewimage:
 ---
 

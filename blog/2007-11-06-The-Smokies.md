@@ -2,7 +2,7 @@
 layout: blog
 title: The Smokies
 tags: [Life, vacation]
-preview:
+preview: I guess everybody has a place a few hours from home that they can go and relax and enjoy nature. One rednecktastic place I like to go...
 previewimage:
 ---
 

@@ -2,7 +2,7 @@
 layout: blog
 title: CSS Framework
 tags: [Java, css, framework]
-preview:
+preview: There are several possible ways to go about building a CSS framework. The framework I mention here is suited for myself and the group...
 previewimage:
 ---
 

@@ -388,7 +388,8 @@ div#post-container {
     float:left;
     margin: 0 10px 0 0;
     .date-day,
-    .date-month{
+    .date-month,
+    .date-year {
       margin: 0px;
       padding: 0px;
       color: #999;
@@ -398,6 +399,10 @@ div#post-container {
 
     .date-day{
       font-size: 150%
+    }
+
+    .date-year {
+      font-size: 50%
     }
   }
 

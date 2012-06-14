@@ -2,7 +2,7 @@
 layout: blog
 title: My 4 month old MacBook Pro Hardrive is skippping... badly
 tags: [Java, bad, drive, hard]
-preview:
+preview: It's never a good thing when your hard drive starts making that funny little skipping noise...
 previewimage:
 ---
 
