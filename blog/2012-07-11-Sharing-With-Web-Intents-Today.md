@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Sharing With Web Intents Today
+title: Sharing Content with Web Intents
 tags: [web intents, html5, share, stats]
 preview: In 2012 the Share Button scene is seriously messed up. But not to worry, Web Intents is on the rise. This article gives you need-to-know info about the current state of Web Intents and how to use them today.
 previewimage:
@@ -371,10 +371,10 @@ Much like linking HTML documents together, we are now linking apps together that
  pushing content to a receiving service via the user. This action or intent of "sharing" content across different apps
  has recently been identified in a [W3C Editors Draft called Web Intents](http://dvcs.w3.org/hg/web-intents/raw-file/tip/spec/Overview.html).
 
-I recently took a job working on [CNN.com](http://cnn.com) and I'm sure you can imagine that the weight and performance of social sharing is pretty serious.
-So I will break down the current state of sharing, then jump into an examination of Web Intents.
+I recently took a job working on [CNN.com](http://cnn.com) and I'm sure you can imagine that the weight and performance of social sharing is pretty serious 'round these parts.
+So I will break down the current state of sharing as it exists today, then jump into an examination of Web Intents.
 <br/>
-<h3>Why do we need web intents? </h3>
+<h3>Why do we need Web Intents? </h3>
 In today's world of sharing we have limited options.
 (Note that the "share" intent is one of many. You can also edit, save, etc... but this article is focused on sharing)
 We are forced to pull a JavaScript file and load a share button dynamically for the user, or we can encode a query string that will
@@ -408,7 +408,7 @@ On page refresh we get the following results:
 <div id="container2" class="max-width-100"></div>
 Here we see that there are no files being cached outside of the browsers default capabilities. Render times are still staying fairly consistent with the previous times, with the exception of Twitter, which
 was cut down to more than half of it's no-cache onload time.
-HTTP requests remain mostly the same, and sizes are a little better, but LinkedIn is still chiming in at 45KB... on each page load.
+HTTP requests remain mostly the same, and sizes are a little better, but LinkedIn is still chiming in at 45KB... on each page load/refresh.
 
 Lastly, when we click the share button for each provider, we get the following:
 <div id="container3" class="max-width-100"></div>
