@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Sharing With Web Intents Today
-tags: [share, stats]
+tags: [web intents, html5, share, stats]
 preview: In 2012 the Share Button scene is seriously messed up. But not to worry, Web Intents is on the rise. This article gives you need-to-know info about the current state of Web Intents and how to use them today.
 previewimage:
 ---
@@ -370,6 +370,9 @@ to make your content social. Allowing users to take action on your specific cont
 Much like linking HTML documents together, we are now linking apps together that are capable of
  pushing content to a receiving service via the user. This action or intent of "sharing" content across different apps
  has recently been identified in a [W3C Editors Draft called Web Intents](http://dvcs.w3.org/hg/web-intents/raw-file/tip/spec/Overview.html).
+
+I recently took a job working on [CNN.com](http://cnn.com) and I'm sure you can imagine that the weight and performance of social sharing is pretty serious.
+So I will break down the current state of sharing, then jump into an examination of Web Intents.
 <br/>
 <h3>Why do we need web intents? </h3>
 In today's world of sharing we have limited options.
@@ -397,8 +400,6 @@ Keep in mind that we are on a desktop browser, so worrying about all the HTTP re
 browser this is definitely something you should be concerned about.
 The previous no-cache scenario is a unique, one time case for our users. And chances are, your user's browser may have already
 cached this content from another site using the same button resources.
-Aside from the issues of resource weight, back doors, and inefficient architecture of sharing services, there are many other issues
-with the current ways we handle sharing of data - which we'll discuss in a sec.
 
 So, after we load all the resources for the first time, surely those will be better cached via local/sessionStorage and
 optimized for fast load times and modern browsers, right? WRONG!
@@ -417,13 +418,14 @@ I didn't look very closely as to why LinkedIn updates the parent DOM, but your p
 this point so it probably doesn't matter too much :)
 
 So with all of this data, we can clearly see that today's DIY sharing intents are raping our applications pretty hard. We have no idea what
-those resources are doing and they come at a high cost.
+those resources are doing and they come at a high cost. Aside from the issues of resource weight, back doors, and inefficient architecture of sharing services, there are many other issues
+ with the current ways we handle the sharing of data.
 <br/>
 <h3>Alternatives</h3>
 The best alternative that works across browsers today is a simple share URL. Throw in some kick ass, responsive [font icons](http://gregoryloucas.github.com/Font-Awesome-More/#all-icons)
  and we have a performant way to share content. But there are still a few problems with this approach:
 <ol>
-<li>We are still faced with a potential list of
+<li>We are faced with a potential list of
 social networks and options that our users may not even use or care about. We've all seen it before, it's the typical "share bar" found on most major
 news sites and blogs.</li>
 <li>We don't have any way of receiving a callback on whether the post/share was successful or not. The only way to get this data is through async analytics
@@ -432,7 +434,7 @@ by emedding a unique identifier in the URL. Then hope the referrer surfaces in n
 Here are the corresponding share URLs from the providers analyzed above.
 <ul>
 <li><a href="https://developer.linkedin.com/documents/share-linkedin">LinkedIn:</a> http://www.linkedin.com/shareArticle?mini=true&url={articleUrl}&title={articleTitle}&summary={articleSummary}&source={articleSource}</li>
-<li><a href="https://dev.twitter.com/docs/intents">Twitter:</a> https://twitter.com/intent/tweet?url={articleURL}</li>
+<li><a href="https://dev.twitter.com/docs/intents">Twitter:</a> https://twitter.com/intent/tweet?url={articleURL} <-- Notice the "/intent/"? We'll get to that in a bit.</li>
 <li><a href="https://dev.twitter.com/docs/intents">Facebook:</a> http://www.facebook.com/sharer.php?u={url to share}&t={title of content}</li>
 <li><a href="https://dev.twitter.com/docs/intents">Google+:</a> https://plus.google.com/share?url={articleURL}</li>
 </ul>
