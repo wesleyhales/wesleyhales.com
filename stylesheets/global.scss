@@ -430,6 +430,8 @@ div#post-container {
   }
   ul {
     list-style: circle;
+  }
+  ol, ul {
     list-style-position: inside;
     li {
         margin:5px 0 5px 0;

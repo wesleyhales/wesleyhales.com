@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <style>
+  #home-page span{
+    padding: 5px;
+    display:block;
+    border: 1px solid red;
+  }
+  
+  #home-page span{
+    padding: 5px;
+    display:block;
+    border: 1px solid green;
+  }
+  
+  </style>
+  <body>
+  
+    <div id="home-page">
+      yo
+    </div>
+  
+  </body>
+  <script type="text/javascript">
+
+  
+  //for (var i=0; i < 5000; i++) {
+  var i = 1;
+  function findBug(){
+    var home = document.getElementById('home-page');
+    var node = document.createElement("span"); 
+    var node2 = document.createElement("div"); 
+    var text = "test"
+    
+    
+    var xmlhttp;
+    if (window.XMLHttpRequest)
+      {// code for IE7+, Firefox, Chrome, Opera, Safari
+      xmlhttp=new XMLHttpRequest();
+      }
+    else
+      {// code for IE6, IE5
+      xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+      }
+    xmlhttp.onreadystatechange=function()
+      {
+      if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+          node2.innerHTML = '';
+          home.innerHTML = '';
+          var resp = "";
+        home.innerHTML = xmlhttp.responseText;
+        resp = xmlhttp.responseText;
+        if(home.innerHTML === resp){
+          window.location.hash = '#' + i++;
+           findBug();
+        }else{  
+          home.appendChild(node);
+        }
+        }
+      }
+    xmlhttp.open("GET","/ajaxinfo.txt",true);
+    xmlhttp.send();
+
+    //node2.innerHTML = 'test2';
+    //home.innerHTML = text;
+    //home.appendChild(node);
+    //alert("html=" + node.innerHTML);
+    //window.location.hash = '#' + i + 1;
+    //window.location.hash = '#' + i++;
+    //alert(node2.innerHTML);
+    //setTimeout(function(){
+    
+    //8},2000)
+  };
+  
+  
+  
+  function ajax(url, callback, async) {
+      var req = init();
+      req.onreadystatechange = processRequest;
+
+      function init() {
+        if (window.XMLHttpRequest) {
+          return new XMLHttpRequest();
+        } else if (window.ActiveXObject) {
+          return new ActiveXObject("Microsoft.XMLHTTP");
+        }
+      }
+
+      function processRequest () {
+        if (req.readyState == 4) {
+          if (req.status == 200) {
+              //if (supports_local_storage()) {
+                  try{
+                     // localStorage[url] = req.responseText;
+                  }catch(e){
+                      if (e.name == 'QUOTA_EXCEEDED_ERR') {
+                          //write this markup to a server-side
+                          //cache or extension of localStorage
+                           alert('Quota exceeded!');
+                      }
+                  }
+              //}
+              if (callback) callback(req.responseText,url);
+          }else {
+            // There is an error of some kind, use our cached copy (if available).
+            if (!!localStorage[url]) {
+              // We have some data cached, return that to the callback.
+              callback(localStorage[url],url);
+              return;
+            }
+          }
+        }
+      }
+
+      this.doGet = function() {
+         req.open("GET",  url + "?timestamp=" + new Date().getTime(), async);
+         req.send(null);
+
+      }
+
+      this.doPost = function(body) {
+        req.open("POST", url, async);
+        req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        req.send(body);
+      }
+  }
+    
+     findBug(); 
+  </script>
+</html>
