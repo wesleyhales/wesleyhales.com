@@ -183,8 +183,14 @@ div.header-box > nav {
 #menu li {
    float: left;
    position: relative;
-   list-style: none;
    z-index: 10;
+}
+
+#twitter_update_list,
+#menu, .toc-list {
+  li{
+    list-style: none;
+  }
 }
 
 #menu a {
