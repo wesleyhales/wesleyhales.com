@@ -3,7 +3,7 @@ layout: blog
 title: Sharing Content with Web Intents
 tags: [web intents, html5, share, stats]
 preview: In 2012 the Share Button scene is seriously messed up. But not to worry, Web Intents is on the rise. This article gives you need-to-know info about the current state of Web Intents and how to use them today.
-previewimage:
+previewimage: /images/design/webintent-logo.jpg
 ---
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>

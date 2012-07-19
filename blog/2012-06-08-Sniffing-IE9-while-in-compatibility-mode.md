@@ -3,7 +3,7 @@ layout: blog
 title: Sniffing IE9 features while in compatibility mode
 tags: [ie, features, sniffing]
 preview: When you need to detect the true version of IE, even when compatibility mode is forced, this is a solution.
-previewimage:
+previewimage: /images/icons/64-ie.png
 ---
 Getting the browser version from the User Agent string is one thing. But, when you
 force compatibility mode in IE, you get whatever version you're forcing to. e.g...
