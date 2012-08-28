@@ -1,7 +1,5 @@
 @import "partials/reset";
 @import "partials/base";
-/*@import "partials/brand";*/
-/*@import "partials/global";*/
 @import "partials/navmenu";
 
 body {
@@ -302,10 +300,14 @@ section.tweets div.actions {
    font-size: 80%;
 }
 
-.book-container{
+.book-container {
   width: 100%;
   text-align:center;
   padding: 10px;
+}
+
+.book-container img {
+  border: 1px solid #777;
 }
 
 /*************************************************
@@ -507,14 +509,18 @@ div#post-container {
 
 .toc-list {
   margin: 10px 0 0 0;
-  max-width: 300px;
 }
 
 .toc-list li {
   margin: 3px 0;
-  padding: 8px 5px 5px 5px;
-  background-color: #eee;
+  padding: 8px 15px 5px 15px;
+  background-color: #777;
   border-radius: 7px;
+  display: inline-block;
+}
+
+.toc-list li a {
+  color: #fff;
 }
 
 /*************************************************

@@ -6,85 +6,130 @@ title: Design
 
 %div{:class=>'design'}
   %header
-    %h1 
+    %h1
       Projects
     %p
     Throughout my entire professional career, I've served in the following roles. This is a brief look at things I've worked on past and present.
   %ul.toc-list
-    %li{:onclick=>'location.hash=\'#code\''}
-      %a{:href=>'#code'}
-        Open Source Projects
-    %li{:onclick=>'location.hash=\'#user-interface\''}
-      %a{:href=>'#user-interface'}
-        User Interface
-    %li{:onclick=>'location.hash=\'#user-experience\''}
-      %a{:href=>'#user-experience'}
+    %li{:onclick=>'hideSections(\'#user-experience\',this)'}
+      %a{:href=>'#user-experience-1'}
         User Experience
-    %li{:onclick=>'location.hash=\'#graphic-design\''}  
-      %a{:href=>'#graphic-design'}
+    %li{:onclick=>'hideSections(\'#user-interface\',this)'}
+      %a{:href=>'#user-interface-1'}
+        User Interface
+    %li{:onclick=>'hideSections(\'#graphic-design\',this)'}
+      %a{:href=>'#graphic-design-1'}
         Graphic Design
+    %li{:onclick=>'hideSections(\'#code\',this)'}
+      %a{:href=>'#code-1'}
+        Open Source
     
   #design-content
-    %h2{:id=>'code'}
-      Open Source Projects
-    %p
-      %a{:href => "http://github.com/wesleyhales/"}I've worked with a few languages over the last dozen or so years. 
-      Mostly Java, Ruby, and other related server-side frameworks, along with scripting in perl, php, and anything else required to accomplish the task at hand... I've seen a lot of shit come and go. 
-      As a UI developer, I consider JavaScript, CSS, and HTML as my strengths. I like to have a clear understanding of native DOM apis before bringing in popular frameworks like jQuery, Zepto, BackBone, Angular, and the list goes on and on.
-    .design-item
-      %a{:href => "http://slidfast.github.com/slidfast/"}
-        %img{:src => "/images/design/first-post/slidfast-small.png", :class => "max-width-100"}/
-      Slidfast - A project I created around HTML5 in enterprise environments. 
-    .design-item
-      %a{:href => "http://www.ohloh.net/accounts/wesleyhales"}
-        %img{:src => "/images/design/first-post/ohloh.png", :class => "max-width-100"}/
-      Projects I was involved in or founded prior to that new-fangled github octocat thingy
-    %h2{:id=>'graphic-design'}
-      Graphic Design
-    %p
-      My designs usually start out with a rough draft on a sheet of paper. From there, I use the pen tool to redraw in Photoshop. Design work is a creative outlet for me and I try to design something at least every few months.
-    .design-item
-      %a{:href => "/images/design/first-post/layout1-mod.png"}
-        %img{:src => "/images/design/first-post/layout1-mod-small.png", :class => "max-width-100"}/
-      Rough draft of a mobile analytics concept home page graphic.
-    %h2{:id=>'user-interface'}
-      User Interface
-    %p
-      I try to adhere to a few principals when dealing with both User Interface design and development. For design it's simple - Make the user's interaction as simple and efficient as possible. All while making it look cool of course. Good User Interface design puts emphasis on goals and completing tasks without drawing too much attention to itself.  
-    %p
-      Here we have a fully implemented Firefox theme circa 2009. Over 1.2 million installs and 300k active daily users. During the Firefox 3.6 era, this theme was hot and I received quite a few generous donations from random, kind-hearted people. A very worth while open source effort for me.
-    .design-item
-      %a{:href => "/images/design/first-post/ff3-anthem.png"}
-        %img{:src => "/images/design/first-post/ff3-anthem-small.png", :class => "max-width-100"}/
-    %p
-      This next theme just ended up being a creative experiment. I never made it to publishing the actual theme on Mozilla's website. After Firefox 4 came along, things began moving so freakin' fast in the browser scene and I couldn't keep up with porting my themes to the new versions.
-    .design-item
-      %a{:href => "/images/design/first-post/ff-recovery.png"}
-        %img{:src => "/images/design/first-post/ff-recovery-small.png", :class => "max-width-100"}/
-    %p
-      Cormada is a project I thought of back in 2010. 
-      %a{:href => "http://techcrunch.com/2011/08/29/yc-funded-bushido-an-app-store-for-the-web-that-can-kickstart-your-side-projects/"}Bushido 
-      came along shortly after I stalled on the idea. The basic idea was: upload any POC or example project you have written and let others run or use it. If it's good, turn it into an OSS project. No idea if it could make money :)
-    .design-item
-      %a{:href => "/images/design/first-post/cormada-home.png"}
-        %img{:src => "/images/design/first-post/cormada-home-small.png", :class => "max-width-100"}/
-    %p Cormada app detail page
-    .design-item
-      %a{:href => "/images/design/first-post/cormada-detail.png"}
-        %img{:src => "/images/design/first-post/cormada-detail.png", :class => "max-width-100"}/
-    %h2{:id=>'user-experience'}
-      User Experience
-    %p
-      This is another side project I worked on with 2 other founders. I did all the design in Photoshop, but the User Experience was my true focus here. The main question I kept asking myself is "How can I make users fall in love with this product".
-    .design-item
-      %a{:href => "/images/design/first-post/demo-charts-2.png"}
-        %img{:src => "/images/design/first-post/demo-charts-2-small.png", :class => "max-width-100"}/
-      <br/>
-      %a{:href => "/images/design/first-post/demo-charts-1.png"}
-        %img{:src => "/images/design/first-post/demo-charts-1-small.png", :class => "max-width-100"}/
+    #code
+      %h2
+        Open Source
+      %p
+        I started writing code on an Apple IIe when I was 9. We used to get magazines that had coding examples in the back written in Basic and I would sit for hours copying line-by-line, each GOTO and IF/THEN conditional. That was my first open source experience.
+        Over the last decade
+        %a{:href => "http://github.com/wesleyhales/"}I've worked with a few languages.
+        Mostly Java, Ruby, and other related server-side frameworks, along with scripting in perl, php, and anything else required to accomplish the task at hand... I've seen a lot of shit come and go.
+        As a UI developer, I consider JavaScript, CSS, and HTML as my strengths.
+      .design-item
+        %a{:href => "http://www.ohloh.net/accounts/wesleyhales"}
+          %img{:src => "/images/design/first-post/ohloh.png", :class => "max-width-100"}/
+        Projects I was involved in or founded prior to that new-fangled github octocat thingy
+      .design-item
+        %a{:href => "http://slidfast.github.com/slidfast/"}
+          %img{:src => "/images/design/first-post/slidfast-small.png", :class => "max-width-100"}/
+        Slidfast - A project I created around HTML5 in enterprise environments.
+    #graphic-design
+      %h2
+        Graphic Design
+      %p
+        My designs usually start out with a rough draft on a sheet of paper. From there, I use the pen tool to redraw in Photoshop. Design work is a creative outlet for me and I try to design something at least every few months.
+      .design-item
+        %a{:href => "/images/design/first-post/layout1-mod.png"}
+          %img{:src => "/images/design/first-post/layout1-mod-small.png", :class => "max-width-100"}/
+        Rough draft of a mobile analytics concept home page graphic.
+    #user-interface
+      %h2
+        User Interface
+      %p
+        I try to adhere to a few principals when dealing with both User Interface design and development. For design it's simple - Make the user's interaction as simple and efficient as possible. All while making it look cool of course. Good User Interface design puts emphasis on goals and completing tasks without drawing too much attention to itself.
+      %p
+        Here we have a fully implemented Firefox theme circa 2009. Over 1.2 million installs and 300k active daily users. During the Firefox 3.6 era, this theme was hot and I received quite a few generous donations from random, kind-hearted people. A very worth while open source effort for me.
+      .design-item
+        %a{:href => "/images/design/first-post/ff3-anthem.png"}
+          %img{:src => "/images/design/first-post/ff3-anthem-small.png", :class => "max-width-100"}/
+      %p
+        This next theme just ended up being a creative experiment. I never made it to publishing the actual theme on Mozilla's website. After Firefox 4 came along, things began moving so freakin' fast in the browser scene and I couldn't keep up with porting my themes to the new versions.
+      .design-item
+        %a{:href => "/images/design/first-post/ff-recovery.png"}
+          %img{:src => "/images/design/first-post/ff-recovery-small.png", :class => "max-width-100"}/
+      %p
+        Cormada is a project I thought of back in 2010.
+        %a{:href => "http://techcrunch.com/2011/08/29/yc-funded-bushido-an-app-store-for-the-web-that-can-kickstart-your-side-projects/"}Bushido
+        came along shortly after I stalled on the idea. The basic idea was: upload any POC or example project you have written and let others run or use it. If it's good, turn it into an OSS project. No idea if it could make money :)
+      .design-item
+        %a{:href => "/images/design/first-post/cormada-home.png"}
+          %img{:src => "/images/design/first-post/cormada-home-small.png", :class => "max-width-100"}/
+      %p Cormada app detail page
+      .design-item
+        %a{:href => "/images/design/first-post/cormada-detail.png"}
+          %img{:src => "/images/design/first-post/cormada-detail.png", :class => "max-width-100"}/
+    #user-experience
+      %h2
+        User Experience
+      %p
+        This is a side project (later startup) I worked on with 2 other founders. I did all the design in Photoshop, but the User Experience was my true focus here. The main question I kept asking myself is "How can I make users fall in love with this product".
+      %p
+        %a{:href => "http://blog.apigee.com/apigee_acquires_instaops_embracing_the_apps_everywhere_world"}
+          This startup was acquired in mid-2012 by apigee.
+        I'm proud to say I was on of the original 3. This was my first super-successful side project after many failed attempts.
+      .design-item
+        %a{:href => "/images/design/first-post/demo-charts-2.png"}
+          %img{:src => "/images/design/first-post/demo-charts-2-small.png", :class => "max-width-100"}/
+      .design-item
+        %a{:href => "/images/design/first-post/demo-charts-1.png"}
+          %img{:src => "/images/design/first-post/demo-charts-1-small.png", :class => "max-width-100"}/
   .comments
     #disqus_thread
     :javascript
+      var loc = location.hash, hidden, shown, menu, forEach = Array.prototype.forEach;
+      function hideSections(except,ele){
+        loc = except;
+        menu = document.querySelectorAll('.toc-list li')
+        forEach.call(menu, function(item){
+          item.style.backgroundColor = '#777';
+        });
+        if(ele){
+          ele.style.backgroundColor = '#000';
+        }else{
+          document.querySelector('.toc-list li').style.backgroundColor = '#000';
+        }
+        shown = document.querySelectorAll('#design-content > div');
+        hidden = document.querySelectorAll('#design-content > div:not(' + except + ')');
+        forEach.call(shown, function(section){
+          section.style.display = '';
+        });
+        forEach.call(hidden, function(section){
+          section.style.display = 'none';
+        });
+      }
+      (function(loc){
+         //catch onload scenario
+         if(loc === '#code-1'){
+           hideSections('#code');
+         }else if(loc === '#user-interface-1'){
+           hideSections('#user-interface');
+         }else if(loc === '#graphic-design-1'){
+           hideSections('#graphic-design');
+         }else if(loc === '#user-experience-1'){
+           hideSections('#user-experience');
+         }else{
+           hideSections('#user-experience');
+         }
+      })(loc);
       var disqus_shortname = 'wesleyhales';
       var disqus_url = "http://www.wesleyhales.com/design/";
       var disqus_developer = null;

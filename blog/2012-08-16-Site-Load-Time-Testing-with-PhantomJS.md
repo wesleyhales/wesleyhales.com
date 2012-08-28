@@ -2,7 +2,7 @@
 layout: blog
 title: Web Performance Testing With PhantomJS
 tags: [phantomjs, web performance, testing]
-preview: This post talks about advanced usages of phantomjs and how to use it to test the performance of your user interface.
+preview: This post talks about advanced usages of phantomjs and how to use it to test the performance of your UI. loadreport.js is a tool built for integrating phantomjs into your current build system.
 previewimage: /images/icons/phantomjs.png
 ---
 <img src="/images/icons/phantomjs.png" alt="phantomjs" align="left" class="max-width-100 margin10">

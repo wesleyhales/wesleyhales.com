@@ -2,7 +2,7 @@
 layout: blog
 title: HTML5 is Booming in Atlanta
 tags: [html5, atlanta]
-preview: In less than 1 year, the Atlanta HTML5 User Group has grown to 1000 members. What's next for the open web?
+preview: In less than 1 year, the Atlanta HTML5 User Group has grown to 1000 members. Many folks use HTML5 as a marketing term, but in the dirty south (where the playas play), we use it to build a vibrant open source community.
 previewimage: /images/icons/atlhtml5.jpg
 ---
 <img src="/images/icons/atlhtml5.jpg" alt="atlanta html5" align="left" class="max-width-100 margin10">So, all I can say is that the Atlanta HTML5 community is awesome. Today the [@atlhtml5](http://twitter.com/atlhtml5) user group has reached it's 1000th member! From startups to companies in the Alexa top 20 rankings, Atlanta is heading towards a bright future in innovation and the open web. Front-end developers are in serious demand as Atlanta based companies strive to build web applications that are more offline accessible, responsive, and performant. Companies are moving more JavaScript to the browser, and this demands more structured code following MVC style patterns. Of course, the recent rise of JavaScript frameworks and many other modern browser APIs don't fall under HTML5 directly, but they all showed up around the same time, along with the mobile web boom. This is why HTML5 is the #1 job trend on indeed.com and is the fastest growing keyword found in online job postings.
