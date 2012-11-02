@@ -171,5 +171,3 @@ The amount of stress that I’ve undergone over the past year is not for the fai
 to a new team of developers and managers every 90 days. On top of that, they all knew that I authored a book, so some people
 expect you to shit rainbows at times. Managing expectations can be a bit tricky as well. So I have my acid reflux medicine now,
 I can sleep pretty well after a couple of beers, and I won’t have to pay for many more haircuts as my hair falls out at an even faster rate :)
-
-I will sleep when I die... bitches! ;)
