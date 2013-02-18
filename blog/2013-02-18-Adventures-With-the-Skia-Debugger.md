@@ -2,7 +2,7 @@
 layout: blog
 title: Adventures with the Skia Debugger
 tags: [frontend, html, css, graphics, debug]
-preview: This post talks about my personal experiences in 2012. It was a year filled with fun, stress and craziness all to better understand the movement towards HTML5.
+preview: Want to know more about the Skia debugger, the graphics library backing chrome? This post is for you.
 previewimage: /images/icons/skia.PNG
 ---
 <br/>
