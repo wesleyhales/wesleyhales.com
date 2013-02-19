@@ -33,5 +33,5 @@ Here are the available keyboard shortcuts for the debugger:
 
 After playing around with the debugger, it’s nice to get a very low level snapshot of how long it takes a specific browser to draw the pictures necessary to present a web page.
 
-P.S. I plan on uploading my produced binaries (somewhere), so if you're on a Mac around version 10.7.5, hit me up @wesleyhales. Hopefully I can save a few pour souls a weekend full of building from sources ;)
+P.S. I plan on uploading my produced binaries (somewhere), so if you're on a Mac around version 10.7.5, hit me up @wesleyhales. Hopefully I can save a few poor souls a weekend full of building from sources ;)
 Happy debugging!
