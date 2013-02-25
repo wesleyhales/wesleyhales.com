@@ -2,8 +2,8 @@
 layout: blog
 title: How Collective Wisdom Shapes a Talk
 tags: [websockets, speaking, audience engagement]
-preview: For 1 year
-previewimage: /images/icons/skia.PNG
+preview: This post explains the ideas behind onslyde, an open source tool used to gain audience participation and fine grained analytics on presentations. It also explains the steps to getting setup.
+previewimage: https://si0.twimg.com/profile_images/2190077948/onslyde-4-3.png
 ---
 <br/>
 ## Overview
