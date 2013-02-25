@@ -73,6 +73,7 @@ Google Analytics does not give us are timestamps, or when events occured at a fi
 
 ### From GA and Custom Events
 This is an overview of the device analytics. I didn't want to reinvent the wheel on User Agent detection and keeping track of sessions, so I leveraged GA.
+The following data is from my talk, in the video above, given on February 18th.
 [<img src="/images/posts/2013-02-25/feb18Devnexus.PNG" alt="onslyde architecture" class="margin10 max-width-100">](/images/posts/2013-02-25/feb18Devnexus.PNG)
 
 ## Conclusion
@@ -107,10 +108,20 @@ of the audience on a given topic can be surprising. Not just to the presenter fo
  chance of missed opportunities would be slim.
 <br/><br/>
 ## Open Source
-I'm in the process of moving this out of a private repository and making onslyde freely available. Also, if you
-have any input or suggestions, I'm all ears. <br/>
-The only thing holding me up from releasing this now is the fact that I haven't built a way to provision WebSocket connections (yet). My server is a bit
- of a frankenstein and I need to cleanup the JavaScript.
+This presentation tool is open source. If you'd like to signup for the beta and give it a spin, I would greatly appreciate your feedback.
+This blog post is serving as the documentation for the project until I get some time to improve.
+
+<ul>
+<li><a href="http://onslyde.com" target="_blank">Signup here</a> and get a session ID. Make a note of your assigned "session ID". The UI sucks right now, so after you hit the submit button it will show up in a barely visible green box above the name input.</li>
+<li>Follow the directions <a href="http://onslyde.com/example-deck.html" target="_blank">mentioned in this slide deck</a>. Basically just save the HTML to disk somewhere.</li>
+<li>Go to line 317 in the HTML file you just saved and replace the current sessionID value (103) with the one from your signup.</li>
+<li>You now have a private session for your presentation.</li>
+<li><a href="https://github.com/wesleyhales/onslyde">Come help out with the project</a></li>
+</ul>
+
+If you run into bugs, report them <a href="https://github.com/wesleyhales/onslyde/issues">here</a> please.
+
+Thanks!!
 
 
 <br style="clear:left"/>
