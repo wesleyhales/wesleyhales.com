@@ -12,4 +12,4 @@ branches:
 
 
 script:
-  - bash post_build.sh
+  - bash build/post_build.sh

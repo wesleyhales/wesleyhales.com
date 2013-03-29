@@ -25,10 +25,10 @@ be the input on a GET request to the provided share service.
 For this example, I've taken the most widely used social networks as an example. Each is linked to a simple HTML page that only contains
 their specific resources to display a share button for the given service:
 <ul>
-<li><a href="/examples/shares/twitter/">Twitter</a></li>
-<li><a href="/examples/shares/google/">Google+</a></li>
-<li><a href="/examples/shares/fb/">Facebook</a></li>
-<li><a href="/examples/shares/linkedin/">LinkedIn</a></li>
+<li><a href="/_examples/shares/twitter/">Twitter</a></li>
+<li><a href="/_examples/shares/google/">Google+</a></li>
+<li><a href="/_examples/shares/fb/">Facebook</a></li>
+<li><a href="/_examples/shares/linkedin/">LinkedIn</a></li>
 </ul>
 
 First, I wanted a true measurement on all the resources and page load times without anything in the cache.
@@ -86,7 +86,7 @@ If you're still struggling to wrap your head around Web Intents, you're not alon
 browser supporting the <code>WebKitIntent</code> api is, you guessed it, WebKit. This includes Chrome versions >= 19. But, even though the tag is supported, you must install
 a Chrome extension to actually fulfill the intent.
 
-Here we see what happens when I click a Web Intent enabled button for sharing an image. You can try it out [here](/examples/shares/intent/).
+Here we see what happens when I click a Web Intent enabled button for sharing an image. You can try it out [here](/_examples/shares/intent/).
 <img src="/images/design/webintent-pick.PNG" alt="web intent pick" class="max-width-100 margin10">
 
 At this point you are probably wondering: How do we get the dialogue to show up in teh browser? How can we register an application to handle this request?
@@ -148,7 +148,7 @@ Read more about the details of Web Intents <a href="http://webintents.org">here<
 *Note - Twitter has made the best attempt at an early implementation of Web Intents. The best thing service providers can do today, is follow [Twitter's implementation](https://dev.twitter.com/docs/intents).
 
 For a full example on how to create a Web Intent Chrome extension, run through the examples in <a href="http://intentlab-io12.appspot.com/">this Google IO lab at #IO12</a>.
-Or you can try it out with Chrome 19+ and the simple demo I wrote [here](/examples/shares/intent/).
+Or you can try it out with Chrome 19+ and the simple demo I wrote [here](/_examples/shares/intent/).
 <br/>
 <br/>
 <h3>Other references and good reads:</h3>
