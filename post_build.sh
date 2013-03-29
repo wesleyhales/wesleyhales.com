@@ -6,7 +6,7 @@ git config --global user.email "wesleyhales@gmail.com"
 git config --global user.name "Travis"
 
 if [ "$TRAVIS_BRANCH" == "master" ]; then
-    git checkout gh-pages
+    git checkout -B gh-pages
     git pull gh-pages
     git add -f reports/.
     git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to gh-pages"
