@@ -65,7 +65,7 @@
     //});
 
 </script>
-<script type="text/javascript" src="js/app.js"></script>
+
 <script type="text/javascript">
 
     $( document ).ready( function() {
@@ -111,7 +111,7 @@
                             data = $.parseJSON(data);
 //                    console.log('parsedjson',data);
                             if(!$.trim($("#email").val())){
-                                $('<h3>The report for '+reportData.url+' is <span style=\"color:blue\">#' + data.position + '</span> in line. It will show up below when it\'s ready.</h3>').prependTo('#report').fadeOut(9000);
+                                $('<h3>The report for '+reportData.url+' will show up below when it\'s ready.</h3>').prependTo('#report').fadeOut(9000);
                                 var reportchecker = window.setInterval(function(){
 //                        console.log('reportchecker');
                                     setupReport();
