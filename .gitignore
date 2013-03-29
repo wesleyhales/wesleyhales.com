@@ -1,5 +1,9 @@
 .sass-cache
 _site
 wesleyhales.com.tmproj
+*.iml
 .idea
 .ipr
+.awestruct
+.sass-cache
+_tmp
