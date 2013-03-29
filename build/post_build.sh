@@ -7,13 +7,15 @@ git config --global user.name "Travis"
 
 #Set upstream remote
 git remote add upstream https://${GH_TOKEN}@github.com/wesleyhales/wesleyhales.com.git > /dev/null
+git remote add live https://${GH_TOKEN}@github.com/wesleyhales/wesleyhales.github.com > /dev/null
 
-git fetch -qn upstream > /dev/null
+mkdir $HOME/temp_wesleyhales
+git clone https://${GH_TOKEN}@github.com/wesleyhales/wesleyhales.github.com $HOME/temp_wesleyhales
 
-if [ "$TRAVIS_BRANCH" == "master" ]; then
-    git checkout gh-pages
-    phantomjs loadreport.js http://www.wesleyhales.com performance json
-    git add -f reports/.
-    git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to gh-pages"
-    git push https://${GH_TOKEN}@github.com/${REPO} gh-pages > /dev/null
-fi
+cp -rf _site $HOME/temp_wesleyhales
+
+cd $HOME/temp_wesleyhales
+
+git add -f .
+git commit -m "add new site content"
+git push https://${GH_TOKEN}@github.com/wesleyhales/wesleyhales.github.com master > /dev/null
