@@ -13,6 +13,7 @@ git fetch -qn upstream > /dev/null
 if [ "$TRAVIS_BRANCH" == "master" ]; then
     git fetch > dev/null
     git checkout gh-pages
+    phantomjs loadreport.js http://www.wesleyhales.com performance json
     git add -f reports/.
     git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to gh-pages"
     git push https://${GH_TOKEN}@github.com/${REPO} gh-pages > /dev/null
