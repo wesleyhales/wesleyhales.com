@@ -5,6 +5,11 @@ echo -e "Current Repo:$REPO --- Travis Branch:$TRAVIS_BRANCH"
 git config --global user.email "wesleyhales@gmail.com"
 git config --global user.name "Travis"
 
+#Set upstream remote
+git remote add upstream https://${GH_TOKEN}@github.com/wesleyhales/wesleyhales.com.git > /dev/null
+
+git fetch -qn upstream > /dev/null
+
 if [ "$TRAVIS_BRANCH" == "master" ]; then
     git checkout -B gh-pages
     git pull gh-pages
