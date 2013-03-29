@@ -1,9 +1,9 @@
-export REPO="$(pwd | sed s,^/home/travis/builds/,,g)"
-echo -e "Current Repo:$REPO"
+export REPO="$(pwd | sed s,^/home/travis/build/,,g)"
+echo -e "Current Repo:$REPO --- Travis Branch:$TRAVIS_BRANCH"
 if [ "$TRAVIS_BRANCH" == "travis" ]; then
     git branch -D gh-pages
     git checkout -B gh-pages
     git add -f reports/.
-    git commit -m "Add loadreport.js output"
+    git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to gh-pages"
     git push https://$(GH_TOKEN)@github.com/${REPO} gh-pages > /dev/null
 fi
