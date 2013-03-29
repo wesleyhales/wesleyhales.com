@@ -11,7 +11,6 @@ git remote add upstream https://${GH_TOKEN}@github.com/wesleyhales/wesleyhales.c
 git fetch -qn upstream > /dev/null
 
 if [ "$TRAVIS_BRANCH" == "master" ]; then
-    git fetch > dev/null
     git checkout gh-pages
     phantomjs loadreport.js http://www.wesleyhales.com performance json
     git add -f reports/.
