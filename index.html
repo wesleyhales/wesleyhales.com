@@ -125,7 +125,7 @@
 
                             function setupReport(){
 //                        console.log('setupreport');
-                                $.getJSON('\/rest\/performance\/report\?uuid\='+ data.uuid, function(json) {
+                                $.getJSON('reports\/confess-report.json'+ data.uuid, function(json) {
 //                            console.log('json.length',json.length);
                                     if(json === "#fail" || json.length === undefined || json.length < 5){
                                         //setupReport();
