@@ -11,8 +11,8 @@ git remote add upstream https://${GH_TOKEN}@github.com/wesleyhales/wesleyhales.c
 git fetch -qn upstream > /dev/null
 
 if [ "$TRAVIS_BRANCH" == "master" ]; then
-    git checkout -B gh-pages
-    git pull gh-pages
+    git fetch > dev/null
+    git checkout gh-pages
     git add -f reports/.
     git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to gh-pages"
     git push https://${GH_TOKEN}@github.com/${REPO} gh-pages > /dev/null
