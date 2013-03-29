@@ -12,7 +12,7 @@ git remote add live https://${GH_TOKEN}@github.com/wesleyhales/wesleyhales.githu
 mkdir $HOME/temp_wesleyhales
 git clone https://${GH_TOKEN}@github.com/wesleyhales/wesleyhales.github.com $HOME/temp_wesleyhales
 
-cp -rf _site $HOME/temp_wesleyhales
+cp -rf _site/ $HOME/temp_wesleyhales/
 
 cd $HOME/temp_wesleyhales
 
