@@ -91,68 +91,34 @@
 //            }
 //            console.log(reportData);
 
-            disableForm();
 
 
-            $.get("reports/confess-report.json", { url: 'url', cached: reportData.cachedCheckbox, email: reportData.email},
-                    function(data){
-                        console.log('data',data);
-                        if(data === "#fail"){
-                            hideProgress();
-                            enableForm();
-                            alert('Bad URL or problem with my server');
-                        }else{
-                            var per = 10;
-                            bartimer = window.setInterval(function(){
-                                per += 1;
-                                $('#report .progress-striped .bar').attr('style','width:'+ per +'%');
-                            },2000);
-
-                            data = $.parseJSON(data);
-//                    console.log('parsedjson',data);
-                            if(!$.trim($("#email").val())){
-                                $('<h3>The report for '+reportData.url+' will show up below when it\'s ready.</h3>').prependTo('#report').fadeOut(9000);
-                                var reportchecker = window.setInterval(function(){
-//                        console.log('reportchecker');
-                                    setupReport();
-                                },10000);
-                            }else{
-                                $('#report .progress-striped .bar').hide();
-                                $('<h3>The report for '+reportData.url+' is <span style=\"color:blue\">#' + data.position + '</span> in line. It will show up in your inbox when it\'s ready.</h3>').prependTo('#report').fadeOut(9000);
-                                enableForm();
-                            }
 
 
-                            function setupReport(){
+
+
 //                        console.log('setupreport');
-                                $.getJSON('reports\/confess-report.json', function(json) {
+        $.getJSON('reports\/confess-report.json', function(json) {
 //                            console.log('json.length',json.length);
-                                    //if(json === "#fail" || json.length === undefined || json.length < 5){
-                                        //setupReport();
+            //if(json === "#fail" || json.length === undefined || json.length < 5){
+                //setupReport();
 //                                console.log('fail',json);
-                                 //   }else{
+         //   }else{
 //                                console.log('success',json);
-                                        clearInterval(bartimer);
-                                        clearInterval(reportchecker);
-                                        hideProgress();
+                clearInterval(bartimer);
+                clearInterval(reportchecker);
+                hideProgress();
 
-                                        $("#email").removeAttr("disabled");
-                                        $("#url").removeAttr("disabled");
-                                        $("#reportbutton").removeAttr("disabled");
+                $("#email").removeAttr("disabled");
+                $("#url").removeAttr("disabled");
+                $("#reportbutton").removeAttr("disabled");
 
-                                        $('#formProgress').html('<div class=\"progress progress-striped active\"><div class=\"bar\" style=\"width: 100%;\"></div></div>').fadeOut(200);
-                                        $('<h2>'+ reportData.url +'</h2><h3>' + reportType + '</h3>' +
-                                                '<button class="btn btn-info pull-right" onclick="location.href=\'\/rest\/performance\/speedreport\?uuid">Show Me Some Charts!</button>' +
-                                                '<a href=\"\/rest\/performance\/report\?uuid">JSON</a>').appendTo('#report');
-                                        buildReport(json);
-                              //      }
-                                });
-                            }
-
-                        }
-
-//                    });
-
+                $('#formProgress').html('<div class=\"progress progress-striped active\"><div class=\"bar\" style=\"width: 100%;\"></div></div>').fadeOut(200);
+                $('<h2>'+ reportData.url +'</h2><h3>' + reportType + '</h3>' +
+                        '<button class="btn btn-info pull-right" onclick="location.href=\'\/rest\/performance\/speedreport\?uuid">Show Me Some Charts!</button>' +
+                        '<a href=\"\/rest\/performance\/report\?uuid">JSON</a>').appendTo('#report');
+                buildReport(json);
+      //      }
         });
 
         function disableForm(){
