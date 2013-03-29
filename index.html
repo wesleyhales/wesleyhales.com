@@ -127,10 +127,10 @@
 //                        console.log('setupreport');
                                 $.getJSON('reports\/confess-report.json', function(json) {
 //                            console.log('json.length',json.length);
-                                    if(json === "#fail" || json.length === undefined || json.length < 5){
+                                    //if(json === "#fail" || json.length === undefined || json.length < 5){
                                         //setupReport();
 //                                console.log('fail',json);
-                                    }else{
+                                 //   }else{
 //                                console.log('success',json);
                                         clearInterval(bartimer);
                                         clearInterval(reportchecker);
@@ -145,7 +145,7 @@
                                                 '<button class="btn btn-info pull-right" onclick="location.href=\'\/rest\/performance\/speedreport\?uuid">Show Me Some Charts!</button>' +
                                                 '<a href=\"\/rest\/performance\/report\?uuid">JSON</a>').appendTo('#report');
                                         buildReport(json);
-                                    }
+                              //      }
                                 });
                             }
 
