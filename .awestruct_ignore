@@ -1,5 +1,12 @@
 Rakefile
+Gemfile
+Gemfile.lock
 workers
 type
-Gemfile
+storage
+orientation
+iscroll
+experiment
 build
+_tweets
+_examples
