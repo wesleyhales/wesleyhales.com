@@ -13,4 +13,4 @@ branches:
 
 
 script:
-  - post_build.sh
+  - ./post_build.sh
