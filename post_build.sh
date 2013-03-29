@@ -10,5 +10,5 @@ if [ "$TRAVIS_BRANCH" == "master" ]; then
     git checkout -B gh-pages
     git add -f reports/.
     git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to gh-pages"
-    git push https://$(GH_TOKEN)@github.com/${REPO} gh-pages > /dev/null
+    git push https://${GH_TOKEN}@github.com/${REPO} gh-pages > /dev/null
 fi
