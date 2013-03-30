@@ -1,11 +1,6 @@
 Rakefile
 Gemfile
 Gemfile.lock
-workers
-type
-storage
-orientation
-iscroll
 experiment
 build
 _tweets
