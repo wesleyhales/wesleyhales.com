@@ -21,7 +21,7 @@ title: Blog
               = post.date.strftime( '%d' )
           .date-year
             = post.date.strftime( '%Y' )
-        %img{:src=>post.previewimage, :style=>'margin: 0 10px 0 0', :width=>'50px', :align=>'left'}
+        %img{:src=>post.previewimage, :style=>'margin: 0 10px 0px 0', :width=>'50px', :align=>'left'}
         ~post.preview
         %a{:href=>post.url}
           [read more]
