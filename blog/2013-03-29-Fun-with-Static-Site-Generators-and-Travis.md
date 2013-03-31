@@ -27,6 +27,8 @@ Now, with a little scripting we can have:
 <li>done (with so many other cool features at our fingertips)</li>
 </ol>
 
+Most preprocessor tools do have some kind of built in function for this workflow, but when you need to take it to a finer grained level and leverage services on the CI server, then this is what must be done.
+
 With our new workflow, we let Travis CI do the work for us in a bash script. This opens the door to automation greatness for many other things like testing and asset uploads. As you will see at the end of this article, we add a simple PhantomJS script
 to test how each new commit loads (over time) in a web browser - giving us a baseline for site performance.
 
