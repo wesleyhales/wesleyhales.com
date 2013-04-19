@@ -26,7 +26,16 @@
     %aside#rightcol
       .shadow-helper
         .left-toolbar
-          %section{:class=>'recent-comments'}
+          %section.tags
+            %header
+              %h2.tags-title
+                Upcoming Talks
+              .book-container
+                %a{:href => "http://velocityconf.com/velocity2013/public/schedule/detail/28175", :target => "blank"}
+                  %img.float-left{:src => "/images/velocity.PNG"}/
+                %a{:href => "http://www.oscon.com/oscon2013/public/schedule/detail/29415", :target => "blank"}
+                  %img.float-right{:src => "/images/oscon.PNG", :width => "150px"}/
+          %section.clear.recent-comments
             %header
               #recentcomments.dsq-widget
                 %h2.dsq-widget-title 
