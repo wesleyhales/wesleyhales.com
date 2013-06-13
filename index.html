@@ -32,7 +32,11 @@
             <h2>Loadreport.js</h2>
             <br/>
             <h3>Elapsed Load Time</h3>
-            <canvas id="canvas" height="250" width="1200"></canvas>
+
+            <canvas id="elapsed" height="250" width="1200"></canvas>
+            <h3>Number of Resources</h3>
+            <canvas id="resources" height="250" width="1200"></canvas>
+
             <div id="report">
                 <div id="formProgress"></div>
             </div>
@@ -67,24 +71,49 @@
 
 
 
-
         function buildReport(reportjson){
             var lineChartData = {
                 labels : [],
                 datasets : [
                     {
-                        label: 'HELLO',
-                        labelColor: 'black',
-                        labelFontSize: '16',
-                        fillColor : "rgba(151,187,205,0.5)",
+                        fillColor : "rgba(151,187,205,0.3)",
                         strokeColor : "rgba(151,187,205,1)",
                         pointColor : "rgba(151,187,205,1)",
-                        pointStrokeColor : "#fff",
                         data : []
                     }
                 ]
 
-            }
+            },
+            barChartData = {
+                labels : [],
+                datasets : [
+                    {
+                        fillColor : "rgba(151,187,205,0.3)",
+                        strokeColor : "rgba(151,187,205,1)",
+                        data : []
+                    }
+                ]
+
+            };
+
+            var lineOptions = {
+                scaleShowGridLines : true,
+                scaleShowLabels : true,
+                animationSteps : 150,
+                rotateLabels: 45,
+                showTooltips: true
+            },
+            elapsedChartOptions = {
+                tooltips: {
+                    labelTemplate: '  <%=value%> milliseconds'
+                }
+            },
+            resourcesChartOptions = {
+                tooltips: {
+                    labelTemplate: '  <%=value%> total resources'
+                }
+            };
+
             var rows = [], gotem = false;
             var $header = $('<thead></thead>');
             var $table = $('<table class=\"table table-bordered table-striped\"></table>');
@@ -143,11 +172,16 @@
                         if(key2 === 'timeStamp'){
                             cellVal = new Date(thisreport[key2]);
                             cellVal = cellVal.toLocaleString();
-                            lineChartData.labels.push(cellVal)
+                            lineChartData.labels.push(cellVal);
+                            barChartData.labels.push(cellVal);
                         }
 
                         if(key2 === 'elapsedLoadTime'){
                             lineChartData.datasets[0].data.push(cellVal)
+                        }
+
+                        if(key2 === 'numberOfResources'){
+                            barChartData.datasets[0].data.push(cellVal)
                         }
                         thisrow = $row.append('<td>'+ cellVal +'</td>');
                     }
@@ -155,20 +189,9 @@
                 }
                 $table.append(thisrow).appendTo('#report');
             }
-            var lineOptions = {
-                scaleShowGridLines : true,
-                scaleShowLabels : true,
-                animationSteps : 150,
-                rotateLabels: 45,
-                showTooltips: true
-            };
 
-            var chartOptions = {
-                tooltips: {
-                    labelTemplate: '  <%=value%> milliseconds'
-                }
-            }
-            var myLine = new Chart(document.getElementById("canvas").getContext("2d"),chartOptions).Line(lineChartData,lineOptions);
+            var myLine = new Chart(document.getElementById("elapsed").getContext("2d"),elapsedChartOptions).Line(lineChartData,lineOptions);
+            var myBar = new Chart(document.getElementById("resources").getContext("2d"),resourcesChartOptions).Bar(barChartData,lineOptions);
         }
 
 

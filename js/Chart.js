@@ -1338,13 +1338,14 @@ window.Chart = function(context, options){
     }
 
     var Bar = function(data,config,ctx){
-        var maxSize, scaleHop, calculatedScale, labelHeight, scaleHeight, valueBounds, labelTemplateString, valueHop,widestXLabel, xAxisLength,yAxisPosX,xAxisPosY,barWidth, rotateLabels = 0;
+        var maxSize, scaleHop, calculatedScale, labelHeight, scaleHeight, valueBounds, labelTemplateString, valueHop,widestXLabel, xAxisLength,yAxisPosX,xAxisPosY,barWidth, rotateLabels;
 
         calculateDrawingSizes();
 
         valueBounds = getValueBounds();
         //Check and set the scale
         labelTemplateString = (config.scaleShowLabels)? config.scaleLabel : "";
+        rotateLabels = (config.rotateLabels || 0);
         if (!config.scaleOverride){
 
             calculatedScale = calculateScale(scaleHeight,valueBounds.maxSteps,valueBounds.minSteps,valueBounds.maxValue,valueBounds.minValue,labelTemplateString);
