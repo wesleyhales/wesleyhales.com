@@ -168,8 +168,7 @@ var confess = {
             report.totalResourcesSize = (totalSize / 1000);
             report.nonReportingResources = missingList.length;
             report.timeStamp = now.getTime();
-            report.date = now.getDate() + "/" + now.getMonth() + "/" + now.getFullYear();
-            report.time = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+            report.githubUrl = phantom.args[4];
             report.errors = this.performance.evalConsoleErrors;
 
 
