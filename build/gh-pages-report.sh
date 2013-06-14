@@ -10,7 +10,7 @@ git remote add upstream https://${GH_TOKEN}@github.com/wesleyhales/wesleyhales.c
 
 git fetch -qn upstream > /dev/null
 
-LATEST_SHA=git rev-parse HEAD
+LATEST_SHA="git rev-parse HEAD"
 GITHUB_URL="https://github.com/"
 
 if [ "$TRAVIS_BRANCH" == "master" ]; then
