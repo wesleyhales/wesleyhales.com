@@ -154,6 +154,7 @@ window.Chart = function(context, options){
                 fontColor: 'white',
                 fontSize: '12px',
                 labelTemplate: '<%=label%>: <%=value%>',
+                linkLabelTemplate: '<%=url%>',
                 padding: {
                     top: 10,
                     right: 10,
@@ -263,13 +264,17 @@ window.Chart = function(context, options){
             var posX = x+options.tooltips.offset.left,
                 posY = y+options.tooltips.offset.top,
                 tpl = tmpl(options.tooltips.labelTemplate, this.data),
+                linktpl = tmpl(options.tooltips.linkLabelTemplate, this.data),
                 rectWidth = options.tooltips.padding.left+this.ctx.measureText(tpl).width+options.tooltips.padding.right;
+
             if(posX + rectWidth > ctx.canvas.width) {
                 posX -= posX-rectWidth < 0 ? posX : rectWidth;
             }
+
             if(posY + 24 > ctx.canvas.height) {
                 posY -= 24;
             }
+
             this.ctx.fillStyle = options.tooltips.background;
             this.ctx.fillRect(posX, posY, rectWidth, 24);
             if(options.tooltips.border.width > 0) {
@@ -346,6 +351,17 @@ window.Chart = function(context, options){
     } else {
         context.canvas.onmousemove = function(e) {
             tooltipEventHandler(e);
+        }
+        context.canvas.onclick = function(e) {
+            for(var i in chart.tooltips) {
+                var position = getPosition(context.canvas),
+                    mx = (e.clientX)-position.x,
+                    my = (e.clientY)-position.y;
+                if(chart.tooltips[i].inRange(mx,my)) {
+                    window.open(chart.tooltips[i].data.url,'_blank');
+                }
+            }
+
         }
     }
     context.canvas.onmouseout = function(e) {
@@ -1143,7 +1159,7 @@ window.Chart = function(context, options){
                 for(var j = 0; j < data.datasets[i].data.length; j++) {
                     if(animPc >= 1 && config.showTooltips) {
                         // register tooltips
-                        registerTooltip(ctx,{type:'circle',x:xPos(j),y:yPos(i,j),r:pointRadius},{label:data.labels[j],value:data.datasets[i].data[j]},'Line');
+                        registerTooltip(ctx,{type:'circle',x:xPos(j),y:yPos(i,j),r:pointRadius},{label:data.labels[j],value:data.datasets[i].data[j],url:data.datasets[i].url[j]},'Line');
                     }
                 }
                 ctx.stroke();

@@ -79,7 +79,8 @@
                         fillColor : "rgba(151,187,205,0.3)",
                         strokeColor : "rgba(151,187,205,1)",
                         pointColor : "rgba(151,187,205,1)",
-                        data : []
+                        data : [],
+                        url: []
                     }
                 ]
 
@@ -126,7 +127,8 @@
                     {
                         if(thisreport.hasOwnProperty(key))
                         {
-                            if(key !== 'date' && key !== 'time' && key !== 'taskName' && key !== 'phantomCacheEnabled'){
+                            //todo - remove date and time after a few commits - legacy stuff
+                            if(key !== 'githubUrl' && key !== 'date' && key !== 'time' && key !== 'taskName' && key !== 'phantomCacheEnabled'){
                                 var htext = key.replace(/([A-Z])/g, " $1");
                                 htext = (htext.charAt(0).toUpperCase() + htext.slice(1));
                                 $header.append('<th>' + htext + '</th>');
@@ -166,9 +168,12 @@
                         thisrow = $row.append(resRow);
 
                     //put everything else in a cell
+                    //todo - remove date and time after a few commits - legacy stuff
                     }else if(key2 !== 'date' && key2 !== 'time' && key2 !== 'taskName' && key2 !== 'phantomCacheEnabled'){
 
-                        var cellVal = thisreport[key2];
+                        var cellVal = thisreport[key2],
+                                append = true;
+
                         if(key2 === 'timeStamp'){
                             cellVal = new Date(thisreport[key2]);
                             cellVal = cellVal.toLocaleString();
@@ -177,13 +182,21 @@
                         }
 
                         if(key2 === 'elapsedLoadTime'){
-                            lineChartData.datasets[0].data.push(cellVal)
+                            lineChartData.datasets[0].data.push(cellVal);
+                        }
+
+                        if(key2 === 'githubUrl'){
+                            lineChartData.datasets[0].url.push(cellVal);
+                            append = false;
                         }
 
                         if(key2 === 'numberOfResources'){
                             barChartData.datasets[0].data.push(cellVal)
                         }
-                        thisrow = $row.append('<td>'+ cellVal +'</td>');
+
+                        if(append){
+                            thisrow = $row.append('<td>'+ cellVal +'</td>');
+                        }
                     }
 
                 }

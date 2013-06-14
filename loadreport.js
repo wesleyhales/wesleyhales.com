@@ -168,7 +168,7 @@ var confess = {
             report.totalResourcesSize = (totalSize / 1000);
             report.nonReportingResources = missingList.length;
             report.timeStamp = now.getTime();
-            report.githubUrl = phantom.args[4];
+            report.githubUrl = phantom.args[3];
             report.errors = this.performance.evalConsoleErrors;
 
 
@@ -477,12 +477,12 @@ var confess = {
                 values.push(report[key]);
             }
         }
-        if(phantom.args[3] && phantom.args[3] != 'wipe'){
+        //if(phantom.args[3] && phantom.args[3] != 'wipe'){
             myfile = 'reports/' + filename + '-' + phantom.args[3] + '.' + extension;
-        }else{
+        //}else{
             myfile = 'reports/' + filename + '.' + extension;
 
-        }
+        //}
 
         if(!createNew && fs.exists(myfile)){
             //file exists so append line
