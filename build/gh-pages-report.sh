@@ -10,9 +10,13 @@ git remote add upstream https://${GH_TOKEN}@github.com/wesleyhales/wesleyhales.c
 
 git fetch -qn upstream > /dev/null
 
+LATEST_SHA=git rev-parse HEAD
+GITHUB_URL="https://github.com/"
+
 if [ "$TRAVIS_BRANCH" == "master" ]; then
     git checkout gh-pages
-    phantomjs loadreport.js http://www.wesleyhales.com performance json
+    sleep 1m
+    phantomjs loadreport.js http://www.wesleyhales.com performance json $GITHUB_URL$REPO/commit/$LATEST_SHA
     git add -f reports/.
     git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to gh-pages"
     git push https://${GH_TOKEN}@github.com/${REPO} gh-pages > /dev/null
