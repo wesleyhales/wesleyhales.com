@@ -29,15 +29,14 @@
 
     <div class="row-fluid" >
         <div class="span12">
+
             <h2>Loadreport.js</h2>
             <br/>
             <h3>Elapsed Load Time</h3>
-            <canvas id="elapsed" height="250" width="1200"></canvas>
-            <span id="commitInfo"></span>
-            <iframe id="commitReport1" src="" style="display:none" seamless height="800px"></iframe>
-            <h3>Number of Resources</h3>
-            <canvas id="resources" height="250" width="1200"></canvas>
+            <canvas id="elapsed" height="150" width="1200"></canvas>
 
+            <h3>Number of Resources</h3>
+            <canvas id="resources" height="150" width="1200"></canvas>
             <div id="report">
                 <div id="formProgress"></div>
             </div>
@@ -45,6 +44,18 @@
     </div>
     <hr>
 
+    <div id="myModal" class="modal hide fade" style="width:100%;margin-left: -50%" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel"><span id="commitInfo"></span></h3>
+        </div>
+        <div class="modal-body">
+            <iframe id="commitReport1" width="1200px" height="800px" seamless></iframe>
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+    </div>
 
 
 </div><!--/.fluid-container-->
@@ -64,10 +75,7 @@
 
         $.getJSON('reports\/confess-report.json', function(json) {
                 console.log('json.length',json);
-
                 buildReport(json);
-
-
         });
 
 
@@ -187,8 +195,11 @@
                         }
 
                         if(key2 === 'commitId'){
-                            function nodeFn(){return showCommitInfo(cellVal)};
-                            lineChartData.datasets[0].url.push(nodeFn);
+                            function nodeFn(cellVal){
+                                return function(){showCommitInfo(cellVal)}
+                            };
+
+                            lineChartData.datasets[0].url.push(nodeFn(cellVal));
                             append = false;
                         }
 
@@ -207,12 +218,25 @@
 
             function showCommitInfo(id){
                 $.getJSON('https://api.github.com/repos/wesleyhales/wesleyhales.com/commits/' + id, function(json) {
-
-                    document.getElementById('commitInfo').innerHTML = "<br/>Author:" + json.commit.author.name + "<br/>Commit message:" + json.commit.message + "<br/>"
+                    document.getElementById('commitInfo').innerHTML = "<br/>Author: " + json.commit.author.name + "<br/>Commit message: " + json.commit.message + "<br/>"
                 });
+
+//                $.get('speedreports/' + id + '.html', function(text) {
+//                    var frame = getFrame();
+//                    frame.write(text);
+//                    setTimeout(function(){
+//                        var bubbleContainer = frame.getElementById('contentBubblesContainer');
+//                        var barGraphContainer = frame.getElementById('barGraphContainer');
+//                        document.getElementById('targetBubbles').appendChild(document.adoptNode(bubbleContainer));
+//                        document.getElementById('requestLcContainer').appendChild(document.adoptNode(barGraphContainer));
+//                        $('#myModal').modal('toggle');
+//                    },2000)
+//                });
+
                 document.getElementById('commitReport1').src = 'speedreports/' + id + '.html';
                 document.getElementById('commitReport1').width = '100%';
                 document.getElementById('commitReport1').style.display = '';
+                $('#myModal').modal('toggle');
             }
 
             var myLine = new Chart(document.getElementById("elapsed").getContext("2d"),elapsedChartOptions).Line(lineChartData,lineOptions);
@@ -236,6 +260,25 @@
             }
         });
         return o;
+    };
+
+
+
+    var getFrame = function () {
+        var frame = document.getElementById("temp-frame");
+
+        if (!frame) {
+            // create frame
+            frame = document.createElement("iframe");
+            frame.setAttribute("id", "temp-frame");
+            frame.setAttribute("name", "temp-frame");
+            frame.setAttribute("seamless", "");
+//            frame.setAttribute("sandbox", "allow-same-origin");
+//            frame.style.display = 'none';
+            document.documentElement.appendChild(frame);
+        }
+        // load a page
+        return frame.contentDocument;
     };
 
 </script>
