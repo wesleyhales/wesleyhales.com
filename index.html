@@ -128,7 +128,7 @@
                         if(thisreport.hasOwnProperty(key))
                         {
                             //todo - remove date and time after a few commits - legacy stuff
-                            if(key !== 'githubUrl' && key !== 'date' && key !== 'time' && key !== 'taskName' && key !== 'phantomCacheEnabled'){
+                            if(key !== 'commitId' && key !== 'date' && key !== 'time' && key !== 'taskName' && key !== 'phantomCacheEnabled'){
                                 var htext = key.replace(/([A-Z])/g, " $1");
                                 htext = (htext.charAt(0).toUpperCase() + htext.slice(1));
                                 $header.append('<th>' + htext + '</th>');
@@ -185,7 +185,7 @@
                             lineChartData.datasets[0].data.push(cellVal);
                         }
 
-                        if(key2 === 'githubUrl'){
+                        if(key2 === 'commitId'){
                             lineChartData.datasets[0].url.push(cellVal);
                             append = false;
                         }
