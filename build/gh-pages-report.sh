@@ -16,8 +16,10 @@ GITHUB_URL="https://github.com/"
 if [ "$TRAVIS_BRANCH" == "master" ]; then
     git checkout gh-pages
     sleep 1m
-    phantomjs loadreport.js http://www.wesleyhales.com performance json $GITHUB_URL$REPO/commit/$LATEST_SHA
+    phantomjs loadreport.js http://www.wesleyhales.com performance json $LATEST_SHA
+    phantomjs speedreport.js http://www.wesleyhales.com $LATEST_SHA
     git add -f reports/.
+    git add -f speedreports/.
     git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to gh-pages"
     git push https://${GH_TOKEN}@github.com/${REPO} gh-pages > /dev/null
 fi
