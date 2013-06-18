@@ -32,8 +32,9 @@
             <h2>Loadreport.js</h2>
             <br/>
             <h3>Elapsed Load Time</h3>
-
             <canvas id="elapsed" height="250" width="1200"></canvas>
+            <span id="commitInfo"></span>
+            <iframe id="commitReport1" src="" style="display:none" seamless height="800px"></iframe>
             <h3>Number of Resources</h3>
             <canvas id="resources" height="250" width="1200"></canvas>
 
@@ -186,7 +187,8 @@
                         }
 
                         if(key2 === 'commitId'){
-                            lineChartData.datasets[0].url.push(cellVal);
+                            function nodeFn(){return showCommitInfo(cellVal)};
+                            lineChartData.datasets[0].url.push(nodeFn);
                             append = false;
                         }
 
@@ -201,6 +203,16 @@
 
                 }
                 $table.append(thisrow).appendTo('#report');
+            }
+
+            function showCommitInfo(id){
+                $.getJSON('https://api.github.com/repos/wesleyhales/wesleyhales.com/commits/' + id, function(json) {
+
+                    document.getElementById('commitInfo').innerHTML = "<br/>Author:" + json.commit.author.name + "<br/>Commit message:" + json.commit.message + "<br/>"
+                });
+                document.getElementById('commitReport1').src = 'speedreports/' + id + '.html';
+                document.getElementById('commitReport1').width = '100%';
+                document.getElementById('commitReport1').style.display = '';
             }
 
             var myLine = new Chart(document.getElementById("elapsed").getContext("2d"),elapsedChartOptions).Line(lineChartData,lineOptions);

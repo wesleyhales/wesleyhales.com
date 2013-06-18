@@ -358,7 +358,7 @@ window.Chart = function(context, options){
                     mx = (e.clientX)-position.x,
                     my = (e.clientY)-position.y;
                 if(chart.tooltips[i].inRange(mx,my)) {
-                    window.open(chart.tooltips[i].data.url,'_blank');
+                    chart.tooltips[i].data.url();
                 }
             }
 
