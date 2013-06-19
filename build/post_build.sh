@@ -1,21 +1,27 @@
 export REPO="$(pwd | sed s,^/home/travis/build/,,g)"
 echo -e "Current Repo:$REPO --- Travis Branch:$TRAVIS_BRANCH"
 
+
+GIT_USER_EMAIL="wesleyhales@gmail.com"
+PROD_REPO="wesleyhales/wesleyhales.github.com"
+TEST_PAGE="http://www.wesleyhales.com"
+GITHUB_URL="https://github.com/"
+
 #Set git user
-git config --global user.email "wesleyhales@gmail.com"
+git config --global user.email ${GIT_USER_EMAIL}
 git config --global user.name "Travis"
 
 #Set upstream remote
-git remote add upstream https://${GH_TOKEN}@github.com/wesleyhales/wesleyhales.com.git > /dev/null
-git remote add live https://${GH_TOKEN}@github.com/wesleyhales/wesleyhales.github.com > /dev/null
+git remote add upstream https://${GH_TOKEN}@github.com/${REPO} > /dev/null
+git remote add live https://${GH_TOKEN}@github.com/${PROD_REPO} > /dev/null
 
-mkdir $HOME/temp_wesleyhales
-git clone https://${GH_TOKEN}@github.com/wesleyhales/wesleyhales.github.com $HOME/temp_wesleyhales
+mkdir $HOME/temp_repo
+git clone https://${GH_TOKEN}@github.com/${PROD_REPO} $HOME/temp_repo
 
-cp -rf _site/* $HOME/temp_wesleyhales/
+cp -rf _site/* $HOME/temp_repo/
 
-cd $HOME/temp_wesleyhales
+cd $HOME/temp_repo
 
 git add -f .
 git commit -m "add new site content"
-git push https://${GH_TOKEN}@github.com/wesleyhales/wesleyhales.github.com master > /dev/null
+git push https://${GH_TOKEN}@github.com/${PROD_REPO} master > /dev/null
