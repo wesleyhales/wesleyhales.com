@@ -1,10 +1,9 @@
 export REPO="$(pwd | sed s,^/home/travis/build/,,g)"
 echo -e "Current Repo:$REPO --- Travis Branch:$TRAVIS_BRANCH"
 
+
 GIT_USER_EMAIL="wesleyhales@gmail.com"
 PROD_REPO="wesleyhales/wesleyhales.github.com"
-TEST_PAGE="http://www.wesleyhales.com"
-GITHUB_URL="https://github.com/"
 
 #Set git user
 git config --global user.email ${GIT_USER_EMAIL}

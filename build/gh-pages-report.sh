@@ -1,12 +1,15 @@
 export REPO="$(pwd | sed s,^/home/travis/build/,,g)"
 echo -e "Current Repo:$REPO --- Travis Branch:$TRAVIS_BRANCH"
 
+TEST_PAGE="http://www.wesleyhales.com"
+
 #Set upstream remote
 git remote add upstream https://${GH_TOKEN}@github.com/${REPO} > /dev/null
 
 git fetch -qn upstream > /dev/null
 
 LATEST_SHA=$(git rev-parse HEAD)
+
 
 if [ "$TRAVIS_BRANCH" == "master" ]; then
     git checkout gh-pages
