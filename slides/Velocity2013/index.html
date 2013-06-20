@@ -1,0 +1,49 @@
+<html>
+
+<script type="text/javascript">
+
+function detectBrowser()
+{
+    var fallback = true;
+    
+    if (navigator && navigator.vendor) {
+        if (navigator.vendor.search("Apple") != -1) {
+            var vers = parseInt(navigator.appVersion.replace(/^.*?AppleWebKit\/(\d+).*?$/,'$1'),0);
+                if (vers >= 532) {
+                    fallback = false;
+                }
+        }
+    }
+    
+    var slashIndex = window.location.href.lastIndexOf("/");
+    var cropped = window.location.href.slice(0,slashIndex+1);
+    
+    if (fallback) {
+        window.location.replace( cropped + "assets/fallback/index.html" );
+    }
+    else {
+        window.location.replace( cropped + "assets/player/KeynoteDHTMLPlayer.html" );
+    }
+}
+
+</script>
+
+<body bgcolor="black" onload="detectBrowser()">
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1241000-10']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+</body>
+
+</html>
