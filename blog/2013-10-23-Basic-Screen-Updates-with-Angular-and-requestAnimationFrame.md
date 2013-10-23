@@ -3,7 +3,7 @@ layout: blog
 title: Basic Screen Updates with Angular and requestAnimationFrame
 tags: [rAF,requestAnimationFrame,angular,angularjs,setinterval,settimeout,jank]
 preview: This post shows how to deliver a more performant UI replacing setInterval with requestAnimationFrame for 1 second screen updates.
-previewimage: /images/posts/2013-03-29/awestructlogo.PNG
+previewimage: /images/icons/angular-small.PNG
 ---
 <br/>
 ## Overview
