@@ -19,7 +19,7 @@ If you want to read more about $scope.$apply check out [this article](http://jim
 For this particular case, I need a countdown timer on the page. Basically it sits in the upper right hand corner of the page and lets
 the user know when it's about to refresh the data.
 
-[<img src="/images/posts/2013-10-23/dashboard.PNG" alt="apigee app services dashboard" class="marginTop10 max-width-100">](/images/posts/2013-10-23/dashboard.PNG)
+[<img src="/images/posts/2013-10-23/dashboard.PNG" alt="apigee app services dashboard" class="marginTop10 max-width-100">](https://apigee.com/usergrid/dash/app/index-ma.html)
 
 I finally got a chance to analyze the performance of updating the page every second with a simple timer and couldn't believe how much jank it was causing.
 There are a lot of good articles and videos explaining jank and how to debug, but Paul Irish made a really good short video and I advise you
