@@ -2,7 +2,7 @@
 layout: blog
 title: Jank Busting Apple's Home Page
 tags: [jank]
-preview: In this article, I review how easy it is to bust jank on Apple.com.
+preview: In this article I review how easy it is to bust jank on Apple.com's home page.
 previewimage: /images/icons/apple.logo.PNG
 ---
 <br/>
@@ -11,7 +11,7 @@ Watching frame rates on CSS and/or JavaScript animation is pretty addictive. I w
 performance of a simple countdown timer within the Angular lifecycle. I then spent countless minutes playing
 Jake Archibald's [Jank Invaders](http://jakearchibald.github.io/jank-invaders/) to hone my skills and save the universe from jank :)
 
-So, I was on Apple's home page the other day and noticed some jank in their main carousel animation.
+So, I was on [Apple's home page](http://apple.com) the other day and noticed some jank in their main carousel animation.
 [<img src="/images/posts/2013-10-26/apple.home.PNG" alt="apple home page" style="width:50%" class="margin10">](/images/posts/2013-10-26/apple.home.PNG)
 It wasn't anything huge, but the
 animation seemed to stagger a bit as the transitions were beginning and ending. There are five transitions that occur to display different
@@ -27,7 +27,7 @@ Digging deeper, we can see that a large amount of time is being taken for the ha
  applied when only one or two applications are really needed. This is forcing a longer composite time and ultimately giving the animations some jank.
 
  The fix is easy. Start with the top level container for the animation and see which of the child elements have a null transform and figure out if they really need it.
- If we turn on "Continuous Page Repainting" in dev tools, we can see how the page is being painted and how many composited layers we have.
+ If we turn on "[Continuous Page Repainting](http://updates.html5rocks.com/2013/02/Profiling-Long-Paint-Times-with-DevTools-Continuous-Painting-Mode)" in dev tools, we can see how the page is being painted and how many composited layers we have.
  [<img src="/images/posts/2013-10-26/apple-paint.PNG" alt="bad fps jank" class="marginTop10 max-width-100">](/images/posts/2013-10-26/apple-paint.PNG)
 
  By viewing the source and running through each element of the carousel animation, we can see that the parent already has the proper layer compositing.
