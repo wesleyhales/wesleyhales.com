@@ -2,7 +2,7 @@ before_install:
   - gem install bundler
 language: ruby
 rvm:
-  - 1.9.3
+  - 2.0.0
 before_script:
   - "rake"
   - bash build/post_build.sh
