@@ -337,7 +337,7 @@ window.Chart = function(context, options){
         }
     }
 
-    if(window.Touch) {
+    if('ontouchstart' in document.documentElement) {
         context.canvas.ontouchstart = function(e) {
             e.clientX = e.targetTouches[0].clientX;
             e.clientY = e.targetTouches[0].clientY;
