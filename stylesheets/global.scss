@@ -300,7 +300,8 @@ section.tweets div.actions {
    font-size: 80%;
 }
 
-.book-container {
+.book-container,
+.upcoming-container {
   width: 100%;
   text-align:center;
   padding: 10px;
@@ -308,6 +309,10 @@ section.tweets div.actions {
 
 .book-container img {
   border: 1px solid #777;
+}
+
+.upcoming-container img {
+  margin: 5px;
 }
 
 /*************************************************

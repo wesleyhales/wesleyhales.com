@@ -8,7 +8,26 @@
     %link{ :rel=>'stylesheet', :type=>'text/css', :href=>'/stylesheets/global.css?v31', :media=>'screen, print' }
     %link{ :rel=>'alternate',  :type=>'application/atom+xml', :href=>'/blog.atom' } 
     %script{:type => "text/javascript", :src  => "/js/modernizr.js", :defer => "defer"}
-            
+    %script{:type => "text/javascript", :src  => "//www.google-analytics.com/cx/api.js?experiment=0000001"}
+    :javascript
+      var image_variations = [
+        'original.png',
+        'variation1.png',
+        'variation2.png'
+      ]
+
+      // 2. Choose the Variation for the Visitor
+      var variation = cxApi.chooseVariation();
+
+
+    :javascript
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-1241000-10', 'auto');
+      ga('send', 'pageview');
   %body
     %header
       .header-box{:onclick=>"window.location = 'http://wesleyhales.com'"}
@@ -31,13 +50,11 @@
             %header
               %h2.tags-title
                 Upcoming Events
-              .book-container
-                %a{:href => "http://iloveapis2013.com/", :target => "blank"}
-                  %img.float-left{:src => "/images/icons/apigee-conf.PNG"}/
-                %a{:href => "https://therichwebexperience.com/conference/fort_lauderdale/2013/12/speakers/wesley_hales", :target => "blank"}
-                  %img.float-right{:src => "/images/icons/RWX-CDW_125X125_generic.png"}/
-                %a{:href => "http://developer.chrome.com/devsummit", :target => "blank"}
-                  %img.marginTop10{:src => "/images/icons/chrome-dev-summit.PNG"}/
+              .upcoming-container
+                %a{:href => "http://fluentconf.com/fluent2014/public/schedule/detail/32856", :target => "blank"}
+                  %img.float-left{:src => "/images/icons/fluent2013_logo_reg.gif", :width => "150px"}/
+                %a{:href => "http://devnexus.com/s/speakers", :target => "blank"}
+                  %img.float-right{:src => "/images/icons/devnexus.png"}/
           %section.clear.recent-comments
             %header
               #recentcomments.dsq-widget
@@ -52,11 +69,12 @@
                 %a{:href => "http://www.amazon.com/HTML5-JavaScript-Apps-Wesley-Hales/dp/1449320511/"}
                   %img{:src => "/images/icons/mybook.png"}/
           %section{:class=>'tweets'}
-            %header 
-              %h2{:class=>'tweets-title'}
-                %a{:href => "http://twitter.com/wesleyhales"}
-                  %img{:src => "/images/bird_16_blue.png"}/
-                  Follow @wesleyhales
+            %header
+              %a.twitter-timeline{"data-dnt" => "true", "data-widget-id" => "276405487782739969", :href => "https://twitter.com/wesleyhales"} Tweets by @wesleyhales
+              :javascript
+                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+
 
     #main
       %div{:id=>'post-container'}
@@ -66,7 +84,6 @@
 
     %script{:src => "/js/site.js", :type => "text/javascript", :defer => "defer"}
     %script{:src => "/js/apigee.js", :type => "text/javascript"}
-    = google_analytics
     :javascript
       //Apigee account credentials, available in the App Services admin portal
       var client_creds = {
