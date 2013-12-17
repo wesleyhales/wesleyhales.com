@@ -4,7 +4,7 @@ echo -e "Current Repo:$REPO --- Travis Branch:$TRAVIS_BRANCH"
 TEST_PAGE="http://www.wesleyhales.com"
 
 #Set upstream remote
-git remote add upstream https://${GH_TOKEN}@github.com/${REPO} > /dev/null
+#git remote add upstream https://${GH_TOKEN}@github.com/${REPO} > /dev/null
 
 git fetch -qn upstream > /dev/null
 
