@@ -380,7 +380,7 @@ div#post-container {
     padding: 0px;
   }
   h2.title {
-    font-size: 149%;
+    font-size: 160%;
     font-weight: bold;
     margin: 0px;
     padding: 0px;
@@ -518,18 +518,25 @@ div#post-container {
 
 .toc-list {
   margin: 10px 0 0 0;
+  border-bottom: 1px solid rgba(233, 233, 233, 1);;
 }
 
 .toc-list li {
-  margin: 3px 0;
-  padding: 8px 15px 5px 15px;
+  margin: 3px 0 0 0;
+  padding: 5px 15px 5px 15px;
   background-color: #777;
-  border-radius: 7px;
   display: inline-block;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.toc-list li.active {
+  background-color: #0c0c0c;
 }
 
 .toc-list li a {
   color: #fff;
+  text-decoration: none;
 }
 
 /*************************************************
