@@ -83,14 +83,3 @@
     %br{:class=>'clear'}
 
     %script{:src => "/js/site.js", :type => "text/javascript", :defer => "defer"}
-    %script{:src => "/js/apigee.js", :type => "text/javascript"}
-    :javascript
-      //Apigee account credentials, available in the App Services admin portal
-      var client_creds = {
-              orgName:'wesleyhales',
-              appName:'wesleyhales.com'
-          }
-      window.onload = function(){
-        //Initializes the SDK. Also instantiates Apigee.MonitoringClient
-        var dataClient = new Apigee.Client(client_creds);
-      }
