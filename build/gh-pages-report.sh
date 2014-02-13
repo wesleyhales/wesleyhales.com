@@ -12,7 +12,11 @@ LATEST_SHA=$(git rev-parse HEAD)
 
 
 if [ "$TRAVIS_BRANCH" == "master" ]; then
-    git fetch
+    git status
+    git branch -l
+    git checkout master
+    git pull
+    git fetch master
     git checkout gh-pages
     ps -eo pcpu,pid,user,args
     sleep 1m
