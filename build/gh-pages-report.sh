@@ -12,8 +12,8 @@ LATEST_SHA=$(git rev-parse HEAD)
 
 
 if [ "$TRAVIS_BRANCH" == "master" ]; then
-    git fetch
-    git checkout gh-pages
+    #git fetch
+    git checkout --orphan gh-pages
     ps -eo pcpu,pid,user,args
     sleep 1m
     phantomjs loadreport.js ${TEST_PAGE} performance json $LATEST_SHA
