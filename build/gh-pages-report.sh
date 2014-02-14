@@ -17,7 +17,8 @@ if [ "$TRAVIS_BRANCH" == "master" ]; then
  #   git checkout origin/master
  #   git pull
  #   git fetch origin/master
-    git checkout origin/gh-pages
+    git show-ref
+    git checkout gh-pages
     ps -eo pcpu,pid,user,args
     sleep 1m
     phantomjs loadreport.js ${TEST_PAGE} performance json $LATEST_SHA
