@@ -2,15 +2,15 @@
 layout: blog
 title: Devnexus 2014 and Onslyde
 tags: [devnexus, onslyde, raspberry pi, rpi]
-preview:
-previewimage: /images/icons/apigee.png
+preview: This post explains the details and challenges behind running Onslyde at the Devnexus 2014 conference in Atlanta GA.
+previewimage: /images/icons/onslyde.png
 ---
 <br/>
 ## Overview
-I've been working on an open source project called Onslyde for almost 2 years. If you want to know the
-details behind it you can read articles here, here or watch a recent interview.
+I've been working on an open source project called [Onslyde](https://www.onslyde.com/) for almost 2 years. If you want to know the
+details behind it you can read articles [here](http://coding.smashingmagazine.com/2013/11/20/reinventing-the-tech-conference-experience/), [here](http://wesleyhales.com/blog/2013/02/25/How-Collective-Wisdom-Shapes-a-Talk/) or [watch a recent interview](http://eventtech.co/2014/01/24/wesley-hales-creator-of-onslyde/).
 
-This year, at Devnexus 2014, I wanted to take Onslyde a bit further by offering a way for sponsors to
+This year, at [Devnexus 2014](http://devnexus.com/), I wanted to take Onslyde a bit further by offering a way for sponsors to
 ask questions throughout the day between sessions. Since this was a trial/experiment I went old school and
 didn't create a web interface for reserving sponsored slots. I simply created a spreadsheet with speaker name, session title,
 and time. Sponsors could then choose a time and I would reserve it on a first-come-first-serve basis.
@@ -21,7 +21,9 @@ At it's core, Onslyde is a tool that allows people to connect and give their opi
 attendees can vote on seeded questions that will allow sponsors to connect to those who are truly interested
 in their product or what they have to say.
 
-I've already written about the disconnect between speakers and attendees, but what about the disconnect
+[<img src="/images/posts/2014-02-26/image_3.jpeg" class="margin10 max-width-50 float-right">](/images/posts/2014-02-26/image_3.jpeg)
+
+I've already written about [the disconnect between speakers and attendees](http://coding.smashingmagazine.com/2013/11/20/reinventing-the-tech-conference-experience/), but what about the disconnect
 between sponsors and attendees? After all, these are the companies that shell out massive amounts of cash, setup up
 a booth, and wait for attendees to visit them in hopes of gaining a lead, recruiting a new employee, or making a sell.
 Why not proactively give them true leads that don't require a stop by the ol' exhibit floor booth?
@@ -30,8 +32,8 @@ This all sounds great in theory, but I had no idea how hard this would be to put
 a 2 day conference with around 1200 attendees. So let's look at the details behind the implementation and
 challenges that were faced.
 
-* Devnexus had around ?50? sponsors this year. This included Red Hat, Spring, Twilio, and many others. I wanted a
-way for them to connect to attendees and vice versa.
+* Devnexus had around 30 sponsors this year. This included Red Hat, GitHub, Twilio, and many others. I wanted a
+way for them to communicate with attendees who are interested in what they have to say on the screen.
 
 * We started out by allowing each sponsor to ask one question, and then charging a fee for additional questions.
 Zero paid slots were sold. But almost all the sponsors took advantage of their one free question, so a week before the
@@ -56,6 +58,8 @@ The hardware setup consisted of the following:
 * HDMI to VGA converter dongle
 * 3ft VGA cable
 * VGA 2 way push-button splitter
+
+[<img src="/images/posts/2014-02-26/image.jpeg" class="margin10 max-width-50 float-left">](/images/posts/2014-02-26/image.jpeg)
 
 The last item in the list above is what caused me a lot of trouble. Ultimately the hardware setup was solid and worked
 really well. But physically pushing the button to switch between voting and speakers ready to present was impossible to
@@ -91,6 +95,13 @@ in each room switching the projector to the Onslyde screen, and then switching i
 idea, there wasn't much of a reason to invest in the development until I knew it worked. But, if sponsors could come to a page, login,
 and see documentation and videos about the advantages of the product, then it would've prevented any doubt and probably would've secured more
  interest and questions.
+
+[<img src="/images/posts/2014-02-26/image_9.jpeg" class="margin10 max-width-100 float-left">](/images/posts/2014-02-26/image_9.jpeg)
+<br/>
+## Conclusion
+
+Overall, I can honestly say that I learned a ton from this experience. We all have these grand ideas of how something should work and
+ how cool it will be, but until you get out and actually try it, you have no idea.
 
 <br/>
 <br/>
