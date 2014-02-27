@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: A New Type of Conference
+title: A More Better Conference Experience
 tags: [devnexus, onslyde, raspberry pi, rpi]
 preview: This post explains the details and challenges behind running Onslyde at the Devnexus 2014 conference in Atlanta GA.
 previewimage: /images/icons/onslyde.png
