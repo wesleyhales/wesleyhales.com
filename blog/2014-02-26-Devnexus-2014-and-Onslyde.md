@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Devnexus 2014 and Onslyde
+title: A New Type of Conference
 tags: [devnexus, onslyde, raspberry pi, rpi]
 preview: This post explains the details and challenges behind running Onslyde at the Devnexus 2014 conference in Atlanta GA.
 previewimage: /images/icons/onslyde.png
@@ -12,7 +12,7 @@ details behind it you can read articles [here](http://coding.smashingmagazine.co
 
 This year, at [Devnexus 2014](http://devnexus.com/), I wanted to take Onslyde a bit further by offering a way for sponsors to
 ask questions throughout the day between sessions. Since this was a trial/experiment I went old school and
-didn't create a web interface for reserving sponsored slots. I simply created a spreadsheet with speaker name, session title,
+didn't create a web interface for reserving sponsored slots. I simply created a [spreadsheet](https://docs.google.com/spreadsheet/ccc?key=0AnSCILK6XyYLdHVEdndSY1VCM2NSOFowNzZrb284a3c&usp=drive_web#gid=0) with speaker name, session title,
 and time. Sponsors could then choose a time and I would reserve it on a first-come-first-serve basis.
 <br/>
 ## The Idea
@@ -36,7 +36,7 @@ challenges that were faced.
 way for them to communicate with attendees who are interested in what they have to say on the screen.
 
 * We started out by allowing each sponsor to ask one question, and then charging a fee for additional questions.
-Zero paid slots were sold. But almost all the sponsors took advantage of their one free question, so a week before the
+However, and I'm happy about it now, zero paid slots were sold. But almost all the sponsors took advantage of their one free question, so a week before the
 conference we ended up giving all the slots away for free.
 I quickly learned that trying to sell the empty slots was the wrong approach - mainly because it requires up front sales.
 Either myself or someone else would need to try and up sell sponsors on question slots. It was too much selling without proven results.
@@ -79,6 +79,8 @@ were actually seen and voted on. The only way around this would be to create a v
 current from the speaker and override the secondary Onslyde RPi signal. This is definitely doable and if something doesn't exist that already
 handles this case, then I'm assuming it wouldn't be hard to break out the soldering iron and rig something together.
 
+[<img src="/images/posts/2014-02-26/image_9.jpeg" class="margin10 max-width-100 float-left">](/images/posts/2014-02-26/image_9.jpeg)
+
 * The Raspberry Pi's boot to a stripped down Debian based operating system that goes straight into full screen Chromium. The browser then
 loads a unique onslyde address with the RPis network interface (wlan0) mac address as a query parameter. This was the most generic
 way of identifying the device from my server and keeping track of its location. So, this obviously requires internet access but the conference
@@ -96,12 +98,21 @@ idea, there wasn't much of a reason to invest in the development until I knew it
 and see documentation and videos about the advantages of the product, then it would've prevented any doubt and probably would've secured more
  interest and questions.
 
-[<img src="/images/posts/2014-02-26/image_9.jpeg" class="margin10 max-width-100 float-left">](/images/posts/2014-02-26/image_9.jpeg)
+
 <br/>
 ## Conclusion
 
 Overall, I can honestly say that I learned a ton from this experience. We all have these grand ideas of how something should work and
  how cool it will be, but until you get out and actually try it, you have no idea.
+
+Below are [the results](https://www.onslyde.com/#!/analytics?sessionID=555) from one of the polls that was asked during a morning session:
+[<img src="/images/posts/2014-02-26/devnexus-voting.png" class="margin10 max-width-100">](/images/posts/2014-02-26/devnexus-voting.png)
+You can probably imagine, at this point, what you would do with this data as a sponsor. When each user votes they are required to oauth with their G+
+account. So we have names and email addresses that can be contacted after the fact.
+
+My plans for the future are to investigate if this is worth continuing and make the bootable Onslyde Debian image freely available.
+Feel free to [review my notes](https://docs.google.com/document/d/1STZ6gzOBLPnUypwHtFGZQY9ME7lYK__DpoQcKFzeLV0/edit#heading=h.hnil29ggb4vc) on the exact hardware I used and how I setup
+the devices to boot into full screen Chromium and run Onslyde.
 
 <br/>
 <br/>
