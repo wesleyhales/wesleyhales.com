@@ -2,8 +2,8 @@
 layout: blog
 title: Moving On To Better Things
 tags: [shapesecurity, career]
-preview: This post is about building a company and doing what you love. I recently experienced this at Shape Security in Mountain View Ca.
-previewimage: /images/icons/onslyde.png
+preview: This post is about building a company and doing what you love.
+previewimage: /images/icons/shape-logo.png
 ---
 <br/>
 ## Overview
