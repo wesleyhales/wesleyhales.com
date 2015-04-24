@@ -1,0 +1,1 @@
+awestruct -P production --server --auto

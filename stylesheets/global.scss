@@ -698,3 +698,21 @@ a.dsq-widget-user {
 .gist {
   font-size: 80%;
 }
+
+.table {
+  border-collapse: collapse;
+  width: 100%
+}
+.table td {
+  border:1px solid black;
+  padding: 5px
+}
+
+.table td .c17.c14 {
+  font-size: 1.2em;
+}
+
+.table td .c8a {
+  font-weight: bold;
+  margin: 0 15px 0 0;
+}
