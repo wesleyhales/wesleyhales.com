@@ -8,7 +8,6 @@
     %link{ :rel=>'stylesheet', :type=>'text/css', :href=>'/stylesheets/global.css?v31', :media=>'screen, print' }
     %link{ :rel=>'alternate',  :type=>'application/atom+xml', :href=>'/blog.atom' } 
     %script{:type => "text/javascript", :src  => "/js/modernizr.js", :defer => "defer"}
-    %script{:src => "//cdn.lanyrd.net/badges/person-v1.min.js", :type => "text/javascript"}
     %script{:type => "text/javascript", :src  => "//www.google-analytics.com/cx/api.js?experiment=0000001"}
     :javascript
       var image_variations = [
@@ -50,15 +49,44 @@
           %section.tags
             %header
               %h2.tags-title
-                Upcoming Events
+                Past and Upcoming Presentations
               .upcoming-container
-                %div{:class => "lanyrd-target-splat"}
-                  %a{:href => "http://lanyrd.com/profile/wesleyhales/", :class => "lanyrd-splat lanyrd-number-10 lanyrd-type-all lanyrd-template-detailed", :rel => "me"}
-                    View all on Lanyrd
-                %a{:href => "http://fluentconf.com/javascript-html-2015/public/schedule/speaker/109402", :target => "blank"}
-                  %img.float-left{:src => "/images/icons/fluent2013_logo_reg.gif", :width => "150px"}/
-                %a{:href => "http://devnexus.com/s/speakers", :target => "blank"}
-                  %img.float-right{:src => "/images/icons/devnexus.png"}/
+                %div.speaking-logos
+                  %div.edge
+                    %a{:href => 'https://edgeconf.com/2013-nyc/schedule'}
+                      2013,
+                    %a{:href => 'https://edgeconf.com/2014-sf/schedule'}
+                      2014
+                  %div.velocity
+                    %a{:href => 'http://velocityconf.com/velocityeu2014/public/schedule/detail/37190'}
+                      2014
+                  %div.fluent
+                    %a{:href => 'http://fluentconf.com/fluent2014/public/schedule/speaker/109402'}
+                      2014,
+                    %a{:href => 'http://fluentconf.com/javascript-html-2015/public/schedule/speaker/109402'}
+                      2015,
+                    %a{:href => 'http://conferences.oreilly.com/fluent-javascript-html-ca'}
+                      2016
+                  %div.connectjs
+                    %a{:href=>'http://lanyrd.com/profile/wesleyhales/past/speaking/'}
+                      2013, 2014
+                  %div.devoxx
+                    %a{:href=>'http://lanyrd.com/profile/wesleyhales/past/speaking/'}
+                      2013
+                  %div.devnexus
+                    %a{:href=>'https://www.devnexus.com/s/devnexus2012/speakers'}
+                      2012
+                    %a{:href=>'https://www.devnexus.com/s/devnexus2013/speakers'}
+                      2013
+                    %a{:href=>'https://www.devnexus.com/s/devnexus2014/speakers'}
+                      2014
+                    %a{:href=>'https://www.devnexus.com/s/devnexus2015/speakers'}
+                      2015
+                    %a{:href => 'http://devnexus.com/s/speakers'}
+                      2016
+                  %div.allevents
+                    %a{:href=>'http://lanyrd.com/profile/wesleyhales/past/speaking/'}
+                      All previous talks
           %section.clear.recent-comments
             %header
               #recentcomments.dsq-widget

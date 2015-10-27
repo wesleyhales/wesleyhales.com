@@ -315,6 +315,42 @@ section.tweets div.actions {
   margin: 5px;
 }
 
+.speaking-logos {
+  background: url(../images/speaking-logos2.png) top left no-repeat;
+  height: 300px;
+}
+
+.speaking-logos {
+  div {
+    text-align: left;
+    float: right;
+    width: 61%;
+    background-color: #fafafa;
+    margin:5px;
+  }
+  div.edge {
+    height: 44px;
+  }
+  div.fluent {
+    height: 52px;
+  }
+  div.velocity {
+    height: 53px;
+  }
+  div.connectjs {
+    height: 43px;
+  }
+  div.devoxx {
+    height: 20px;
+  }
+  div.devnexus {
+    height: 21px;
+  }
+  div.allevents {
+    height: 21px;
+  }
+}
+
 /*************************************************
 Main Content
 *************************************************/
