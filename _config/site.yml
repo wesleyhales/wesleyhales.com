@@ -3,7 +3,7 @@ google_analytics: UA-1241000-10
 
 profiles:
   development:
-    disqus: wesleyhales-dev
+    disqus: wesleyhales
     disqus_developer: true
   production:
     base_url: http://www.wesleyhales.com/
